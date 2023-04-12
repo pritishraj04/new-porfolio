@@ -1,0 +1,128 @@
+<script>
+	import { enhance } from '$app/forms';
+	import { page } from '$app/stores';
+	import 'iconify-icon';
+	import Logo from '$lib/components/Logo.svelte';
+	let currentTheme;
+	let isMenuOpen = false;
+	$: currentTheme = $page.data.theme;
+
+	const handleCloseMenu = () => {
+		if (isMenuOpen) {
+			isMenuOpen = false;
+		}
+	};
+
+	const submitUpdateTheme = ({ action }) => {
+		const theme = action.searchParams.get('theme');
+
+		if (theme) {
+			document.documentElement.setAttribute('data-theme', theme);
+		}
+	};
+
+	const themes = [
+		{ name: 'light', icon: 'line-md:moon-filled-alt-to-sunny-filled-loop-transition' },
+		{ name: 'dark', icon: 'line-md:sunny-filled-loop-to-moon-alt-filled-loop-transition' }
+	];
+</script>
+
+<header>
+	<div class="container">
+		<div class="logo"><a href="/"><Logo theme={currentTheme} /></a></div>
+		<div class="flex">
+			<nav>
+				<ul data-role="list">
+					<li class={isMenuOpen ? 'flex navigation' : 'flex navigation nav-hidden'}>
+						<div><a class="link" href="/about" on:click={handleCloseMenu}>About</a></div>
+						<div><a class="link" href="/works" on:click={handleCloseMenu}>Works</a></div>
+					</li>
+					<li><a class="button" href="/contact">Contact me</a></li>
+					<li>
+						<form method="POST" use:enhance={submitUpdateTheme}>
+							{#each themes as theme}
+								{#if currentTheme !== theme.name}
+									<button
+										class="button"
+										data-type="ghost"
+										formaction="/?/setTheme&theme={theme.name}&redirectTo={$page.url.pathname}"
+										><iconify-icon icon={theme.icon} style="font-size: 32px;" /></button
+									>
+								{/if}
+							{/each}
+						</form>
+					</li>
+				</ul>
+			</nav>
+			<button
+				class="hamburger-button button"
+				data-type="ghost"
+				on:click={() => (isMenuOpen = !isMenuOpen)}
+				><iconify-icon
+					icon={isMenuOpen
+						? 'line-md:menu-to-close-alt-transition'
+						: 'line-md:close-to-menu-alt-transition'}
+					style="font-size: 32px"
+				/></button
+			>
+		</div>
+	</div>
+</header>
+
+<style>
+	header {
+		position: fixed;
+		width: 100%;
+		background-color: var(--clr-neutral-900);
+	}
+	header .container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 2.844rem;
+		padding-bottom: 1.5rem;
+	}
+	.flex {
+		display: flex;
+		gap: 2.5rem;
+		align-items: center;
+	}
+	nav ul {
+		display: flex;
+		align-items: center;
+		gap: 2.5rem;
+	}
+	.hamburger-button {
+		display: none;
+	}
+	@media screen and (max-width: 680px) {
+		.nav-hidden {
+			height: 0;
+			overflow: hidden;
+			position: absolute;
+			top: 90px;
+			padding: 0;
+		}
+		.flex {
+			gap: 0.7rem;
+		}
+		.hamburger-button {
+			display: block;
+		}
+		nav ul {
+			gap: 0.7rem;
+		}
+		header {
+			position: relative;
+		}
+		.navigation {
+			flex-direction: column;
+			position: absolute;
+			gap: 2.5rem;
+			top: 120px;
+			left: 0;
+			background-color: var(--clr-neutral-900);
+			width: 100%;
+		}
+	}
+</style>
