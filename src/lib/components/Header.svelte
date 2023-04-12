@@ -73,7 +73,6 @@
 	header {
 		position: fixed;
 		width: 100%;
-		background-color: var(--clr-neutral-900);
 	}
 	header .container {
 		display: flex;
@@ -121,7 +120,6 @@
 			gap: 2.5rem;
 			top: 120px;
 			left: 0;
-			background-color: var(--clr-neutral-900);
 			width: 100%;
 		}
 	}
