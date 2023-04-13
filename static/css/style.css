@@ -171,8 +171,11 @@ body {
 }
 /* utility styles */
 
-.bg-primary-400 {
-	background-color: var(--clr-primary-400);
+[data-theme='light'] .bg-primary {
+	background-color: var(--clr-neutral-200);
+}
+[data-theme='dark'] .bg-primary {
+	background-color: var(--clr-neutral-900);
 }
 .bg-accent-400 {
 	background-color: var(--clr-accent-400);
@@ -341,4 +344,10 @@ body {
 	min-height: 100vh;
 	background-color: rgba(0, 0, 0, 0.3);
 	backdrop-filter: blur(2px);
+}
+
+[data-theme='dark'] .hero {
+	background-image: url('../img/hero-pattern.jpg');
+	background-position: center;
+	background-size: cover;
 }

@@ -6,6 +6,7 @@
 	let currentTheme;
 	let isMenuOpen = false;
 	$: currentTheme = $page.data.theme;
+	let scrollY;
 
 	const handleCloseMenu = () => {
 		if (isMenuOpen) {
@@ -27,17 +28,19 @@
 	];
 </script>
 
-<header>
-	<div class="container">
+<svelte:window bind:scrollY />
+
+<header class={scrollY > 100 || isMenuOpen ? 'bg-primary' : ''}>
+	<div class="container" style={scrollY > 100 ? 'padding-top: 1.5rem;' : ''}>
 		<div class="logo"><a href="/"><Logo theme={currentTheme} /></a></div>
 		<div class="flex">
 			<nav>
 				<ul data-role="list">
-					<li class={isMenuOpen ? 'flex navigation' : 'flex navigation nav-hidden'}>
-						<div><a class="link" href="/about" on:click={handleCloseMenu}>About</a></div>
-						<div><a class="link" href="/works" on:click={handleCloseMenu}>Works</a></div>
+					<li class={isMenuOpen ? 'flex navigation bg-primary' : 'flex navigation nav-hidden'}>
+						<div><a class="link" href="#about" on:click={handleCloseMenu}>About</a></div>
+						<div><a class="link" href="#works" on:click={handleCloseMenu}>Works</a></div>
 					</li>
-					<li><a class="button" href="/contact">Contact me</a></li>
+					<li><a class="button" href="#contact">Contact me</a></li>
 					<li>
 						<form method="POST" use:enhance={submitUpdateTheme}>
 							{#each themes as theme}
@@ -80,6 +83,7 @@
 		align-items: center;
 		padding-top: 2.844rem;
 		padding-bottom: 1.5rem;
+		transition: padding-top 300ms;
 	}
 	.flex {
 		display: flex;
@@ -95,13 +99,6 @@
 		display: none;
 	}
 	@media screen and (max-width: 680px) {
-		.nav-hidden {
-			height: 0;
-			overflow: hidden;
-			position: absolute;
-			top: 90px;
-			padding: 0;
-		}
 		.flex {
 			gap: 0.7rem;
 		}
@@ -111,16 +108,24 @@
 		nav ul {
 			gap: 0.7rem;
 		}
-		header {
-			position: relative;
-		}
 		.navigation {
 			flex-direction: column;
 			position: absolute;
-			gap: 2.5rem;
-			top: 120px;
+			height: 100vh;
+			height: 100dvh;
+			gap: 1.3rem;
+			padding-top: 1.3rem;
+			top: 90px;
 			left: 0;
 			width: 100%;
+			transition: height 300ms, padding 500ms;
+		}
+		.nav-hidden {
+			height: 0;
+			overflow: hidden;
+			position: absolute;
+			top: 90px;
+			padding: 0;
 		}
 	}
 </style>
