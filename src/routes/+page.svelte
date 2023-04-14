@@ -1,5 +1,7 @@
 <script>
 	import HeroMarquee from '$lib/components/HeroMarquee.svelte';
+	import 'iconify-icon';
+	import Works from '$lib/components/Works.svelte';
 </script>
 
 <main>
@@ -22,10 +24,10 @@
 			</div>
 		</div>
 	</section>
-	<section class="about">
+	<section class="about margin-block-primary padding-block-primary" id="about">
 		<div class="container">
+			<h1 class="section-heading">About</h1>
 			<div class="about-wrapper">
-				<h1 class="section-heading">About</h1>
 				<h2 class="secondary-heading">
 					Currently Working as Test Engineer at Creatiosoft Pvt. Ltd.
 				</h2>
@@ -76,7 +78,45 @@
 					</li>
 				</ul>
 			</div>
+			<div class="expertise-wrapper">
+				<div class="secondary-heading">My Expertise</div>
+				<ul data-role="list">
+					<li>
+						<iconify-icon icon="icons8:idea" style="font-size: 96px" />
+						<h5 class="ternary-heading">Digital Products</h5>
+						<p class="paragraph">
+							Web design encompasses many different skills and diciplines in the production of all
+							web.
+						</p>
+					</li>
+					<li>
+						<iconify-icon icon="tabler:device-tablet" style="font-size: 96px" />
+						<h5 class="ternary-heading">UI-UX Design</h5>
+						<p class="paragraph">
+							Web design encompasses many different skills and diciplines in the production of all
+							web.
+						</p>
+					</li>
+					<li>
+						<iconify-icon icon="iconoir:dev-mode-laptop" style="font-size: 96px" />
+						<h5 class="ternary-heading">Web Development</h5>
+						<p class="paragraph">
+							Web design encompasses many different skills and diciplines in the production of all
+							web.
+						</p>
+					</li>
+				</ul>
+			</div>
 		</div>
+	</section>
+	<section class="works margin-block-primary padding-block-primary" id="works">
+		<div class="container">
+			<h1 class="section-heading">My Works</h1>
+			<div class="works-wrapper">
+				<h2 class="secondary-heading">I've Created these, please have a look</h2>
+			</div>
+		</div>
+		<!-- <Works /> -->
 	</section>
 </main>
 
@@ -111,9 +151,9 @@
 	.showcase h3 {
 		font-size: 16px;
 	}
-	.about {
-		margin-block: 30px;
-		padding-block: 50px;
+	.about,
+	.works {
+		scroll-margin-top: 5em;
 	}
 	.about-wrapper .secondary-heading {
 		margin-top: 0.7rem;
@@ -122,7 +162,14 @@
 		margin-block: 1rem;
 		max-width: 675px;
 	}
-	.history-wrapper .secondary-heading {
+	.about-wrapper,
+	.history-wrapper,
+	.expertise-wrapper,
+	.works-wrapper {
+		margin-block: 2.15rem;
+	}
+	.history-wrapper .secondary-heading,
+	.expertise-wrapper .secondary-heading {
 		font-weight: var(--fw-semi-bold);
 	}
 	.history-wrapper ul {
@@ -153,6 +200,20 @@
 	.history-wrapper li p {
 		margin-block: 0.2rem;
 	}
+
+	.expertise-wrapper ul {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		margin-block: 1rem;
+	}
+	.expertise-wrapper li {
+		text-align: center;
+		padding: 3rem 4rem;
+	}
+	.expertise-wrapper .ternary-heading {
+		margin-block: 0.7rem;
+	}
+
 	@media screen and (max-width: 50em) {
 		.text-name {
 			font-size: 2.25rem;
@@ -165,6 +226,9 @@
 		}
 		.history-wrapper li::before {
 			top: 0.4375rem;
+		}
+		.expertise-wrapper ul {
+			grid-template-columns: 1fr;
 		}
 	}
 </style>

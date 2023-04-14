@@ -7,35 +7,35 @@
 	const marqElements = [
 		{
 			src: '/img/svgs/html.svg',
-			alt: 'HTML Logo'
+			alt: 'HTML'
 		},
 		{
 			src: '/img/svgs/css.svg',
-			alt: 'CSS Logo'
+			alt: 'CSS'
 		},
 		{
 			src: '/img/svgs/sveltekit.svg',
-			alt: 'Svelte Logo'
+			alt: 'Svelte'
 		},
 		{
 			src: '/img/svgs/reactjs.svg',
-			alt: 'ReactJS Logo'
+			alt: 'ReactJS'
 		},
 		{
 			src: '/img/svgs/supabase.svg',
-			alt: 'Supabase Logo'
+			alt: 'Supabase'
 		},
 		{
 			src: '/img/svgs/mongodb.svg',
-			alt: 'MongoDB Logo'
+			alt: 'MongoDB'
 		},
 		{
 			src: '/img/svgs/nodejs.svg',
-			alt: 'NodeJS Logo'
+			alt: 'NodeJS'
 		},
 		{
 			src: '/img/svgs/expressjs.svg',
-			alt: 'ExpressJS Logo'
+			alt: 'ExpressJS'
 		}
 	];
 	const marqueeOption = {
@@ -71,7 +71,8 @@
 		<Splide extensions={{ AutoScroll }} options={marqueeOption} aria-labelledby="Marquee">
 			{#each marqElements as marq}
 				<SplideSlide>
-					<img class="marqImages" src={marq.src} alt={marq.alt} />
+					<img class="marqImages" src={marq.src} alt={`${marq.alt} Logo`} />
+					<p class="paragraph" style="text-align: center;">{marq.alt}</p>
 				</SplideSlide>
 			{/each}
 		</Splide>
@@ -80,9 +81,11 @@
 
 <style>
 	.marquee {
-		margin-block: 1.96rem 0.76rem;
+		margin-top: 1.56rem;
 	}
 	.marqImages {
 		width: 4rem;
+		margin-bottom: 0.7rem;
+		margin-inline: auto;
 	}
 </style>
