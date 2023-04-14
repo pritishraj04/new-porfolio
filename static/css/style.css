@@ -131,6 +131,7 @@ body {
 	font-family: var(--ff-body);
 	color: var(--clr-neutral-800);
 	background-color: #f6f8f9;
+	transition: background-color 400ms linear, color 400ms linear;
 }
 [data-theme='light'] body {
 	color: var(--clr-neutral-800);
@@ -307,6 +308,20 @@ body {
 	background-color: var(--clr-neutral-500);
 }
 [data-theme='dark'] .section-heading::after {
+	background-color: var(--clr-neutral-600);
+}
+
+[data-theme='light'] .history-wrapper li::before {
+	background-color: var(--clr-neutral-900);
+}
+[data-theme='dark'] .history-wrapper li::before {
+	background-color: var(--clr-neutral-100);
+}
+
+[data-theme='light'] .history-wrapper li::after {
+	background-color: var(--clr-neutral-500);
+}
+[data-theme='dark'] .history-wrapper li::after {
 	background-color: var(--clr-neutral-600);
 }
 

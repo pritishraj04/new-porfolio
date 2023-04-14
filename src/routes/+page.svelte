@@ -44,7 +44,7 @@
 			</div>
 			<div class="history-wrapper">
 				<h2 class="secondary-heading">Work History</h2>
-				<ul>
+				<ul data-role="list">
 					<li>
 						<h5 class="ternary-heading">Test Engineer - Creatiosoft Pvt. Ltd., Noida</h5>
 						<p class="paragraph">May 2022 - Currently Working Here</p>
@@ -61,7 +61,7 @@
 					</li>
 				</ul>
 				<h2 class="secondary-heading">Education History</h2>
-				<ul>
+				<ul data-role="list">
 					<li>
 						<h5 class="ternary-heading">B. Tech - Amity University</h5>
 						<p class="paragraph">Mar 2015 - May 2019</p>
@@ -111,17 +111,6 @@
 	.showcase h3 {
 		font-size: 16px;
 	}
-	@media screen and (max-width: 50em) {
-		.text-name {
-			font-size: 2.25rem;
-		}
-		.text-work {
-			font-size: 1.5rem;
-		}
-		.showcase h3 {
-			font-size: 14px;
-		}
-	}
 	.about {
 		margin-block: 30px;
 		padding-block: 50px;
@@ -142,18 +131,40 @@
 	}
 	.history-wrapper li {
 		position: relative;
-		margin-block: 0.5rem;
+		margin-block: 0.7rem;
 	}
-	.history-wrapper li:not(:last-child)::before {
+	.history-wrapper li:not(:last-child)::after {
 		content: '';
+		left: -0.725rem;
+		top: 0.78rem;
 		position: absolute;
-		top: 15.4px;
-		left: -13.9px;
-		background-color: #656565;
-		width: 2px;
-		height: 110%;
+		width: 0.0625rem;
+		height: 115%;
+	}
+	.history-wrapper li::before {
+		content: '';
+		left: -0.85rem;
+		top: 0.5rem;
+		position: absolute;
+		width: 5px;
+		height: 5px;
+		border-radius: 50%;
 	}
 	.history-wrapper li p {
 		margin-block: 0.2rem;
+	}
+	@media screen and (max-width: 50em) {
+		.text-name {
+			font-size: 2.25rem;
+		}
+		.text-work {
+			font-size: 1.5rem;
+		}
+		.showcase h3 {
+			font-size: 14px;
+		}
+		.history-wrapper li::before {
+			top: 0.4375rem;
+		}
 	}
 </style>
