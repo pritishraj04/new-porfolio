@@ -136,7 +136,7 @@ body {
 }
 [data-theme='dark'] body {
 	color: var(--clr-neutral-200);
-	background-color: var(--clr-neutral-900);
+	background-color: hsla(0, 0%, 0%, 0.477);
 }
 
 [data-theme='light'] h1,
@@ -177,29 +177,11 @@ body {
 [data-theme='dark'] .bg-primary {
 	background-color: var(--clr-neutral-900);
 }
-.bg-accent-400 {
-	background-color: var(--clr-accent-400);
+[data-theme='light'] .bg-blur-primary {
+	background-color: rgba(149, 149, 149, 0.35);
 }
-.bg-neutral-100 {
-	background-color: var(--clr-neutral-100);
-}
-.bg-neutral-200 {
-	background-color: var(--clr-neutral-200);
-}
-.bg-neutral-900 {
-	background-color: var(--clr-neutral-900);
-}
-.bg-danger {
-	background-color: var(--clr-danger);
-}
-.bg-success {
-	background-color: var(--clr-success);
-}
-.bg-info {
-	background-color: var(--clr-info);
-}
-.bg-warn {
-	background-color: var(--clr-warn);
+[data-theme='dark'] .bg-blur-primary {
+	background-color: hsla(0, 0%, 40%, 0.35);
 }
 .bg-blur {
 	backdrop-filter: saturate(180%) blur(30px);
@@ -350,4 +332,5 @@ body {
 	background-image: url('../img/hero-pattern.jpg');
 	background-position: center;
 	background-size: cover;
+	box-shadow: inset 0px -115px 76px -50px black;
 }
