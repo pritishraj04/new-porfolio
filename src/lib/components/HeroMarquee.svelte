@@ -57,6 +57,9 @@
 				perPage: 4
 			},
 			620: {
+				perPage: 3
+			},
+			370: {
 				perPage: 2
 			}
 		}
@@ -77,7 +80,7 @@
 
 <style>
 	.marquee {
-		margin-block: 1.36rem;
+		margin-block: 1.96rem 0.76rem;
 	}
 	.marqImages {
 		width: 4rem;

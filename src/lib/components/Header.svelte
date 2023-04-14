@@ -76,6 +76,7 @@
 	header {
 		position: fixed;
 		width: 100%;
+		z-index: 9999;
 	}
 	header .container {
 		display: flex;
@@ -123,9 +124,9 @@
 		.nav-hidden {
 			height: 0;
 			overflow: hidden;
-			position: absolute;
 			top: 90px;
 			padding: 0;
+			transition: height 300ms, padding 500ms;
 		}
 	}
 </style>
