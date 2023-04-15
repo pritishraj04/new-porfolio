@@ -345,6 +345,18 @@ body {
 [data-theme='dark'] .expertise-wrapper ul li:nth-child(2n) {
 	background-color: var(--clr-neutral-800);
 }
+[data-theme='light'] .contact-wrapper {
+	background-color: var(--clr-neutral-300);
+}
+[data-theme='dark'] .contact-wrapper {
+	background-color: var(--clr-neutral-800);
+}
+[data-theme='light'] .contact-wrapper .left::after {
+	background-color: var(--clr-neutral-300);
+}
+[data-theme='dark'] .contact-wrapper .left::after {
+	background-color: var(--clr-neutral-800);
+}
 
 /* Styles */
 

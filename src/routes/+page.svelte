@@ -147,6 +147,38 @@
 			</div>
 		</div>
 	</section>
+	<section class="works margin-block-primary padding-block-primary" id="contact">
+		<div class="container">
+			<h1 class="section-heading">Contact me</h1>
+			<div class="contact-wrapper">
+				<h2 class="secondary-heading">Get in touch.</h2>
+				<div class="contacts">
+					<div class="left">
+						<button class="button">Send an Instant Query</button>
+					</div>
+					<div class="right">
+						<div class="contact-method">
+							<a class="primary-link" href="mailto:pritishraj04@gmail.com">pritishraj04@gmail.com</a
+							>
+						</div>
+						<div class="contact-method">
+							<a class="primary-link" href="tel:+919097785207">+91 9097785207</a>
+						</div>
+						<div class="contact-method">
+							<a class="primary-link" href="https://github.com/pritishraj04" target="blank"
+								>github.com/pritishraj04</a
+							>
+						</div>
+						<div class="contact-method">
+							<a class="primary-link" href="https://linkedin.com/in/pritishraj04"
+								>linkedin.com/in/pritishraj04</a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </main>
 
 <style>
@@ -273,7 +305,43 @@
 	.feature-details button {
 		padding-block: 0;
 	}
-
+	.contact-wrapper {
+		padding: 2.875rem 1.625rem;
+		margin-block: 2.5rem;
+	}
+	.contacts {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		margin-top: 20px;
+		gap: 2rem;
+	}
+	.contact-wrapper .button {
+		padding-block: 0;
+	}
+	.contact-wrapper {
+		position: relative;
+	}
+	.contact-wrapper .left::after {
+		position: absolute;
+		content: 'or';
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		margin-top: 20px;
+		padding: 10px;
+	}
+	.contact-wrapper .left::before {
+		position: absolute;
+		content: '';
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: #656565;
+		width: 0.0625rem;
+		margin-top: 20px;
+		height: 60%;
+	}
 	@media screen and (max-width: 50em) {
 		.text-name {
 			font-size: 2.25rem;
@@ -295,6 +363,18 @@
 		}
 		.feature-details {
 			max-width: unset;
+		}
+		.contacts {
+			flex-direction: column;
+			gap: 4rem;
+		}
+		.contact-wrapper .left::after {
+			margin-top: 0;
+		}
+		.contact-wrapper .left::before {
+			transform: translate(-50%, -50%) rotate(90deg);
+			margin-top: 0;
+			height: 80%;
 		}
 	}
 </style>
