@@ -2,6 +2,7 @@
 	import HeroMarquee from '$lib/components/HeroMarquee.svelte';
 	import 'iconify-icon';
 	import Works from '$lib/components/Works.svelte';
+	import ProjectCard from '../lib/components/ProjectCard.svelte';
 </script>
 
 <main>
@@ -116,7 +117,35 @@
 				<h2 class="secondary-heading">I've Created these, please have a look</h2>
 			</div>
 		</div>
-		<!-- <Works /> -->
+		<Works />
+		<div class="container">
+			<div class="work-button" style="text-align: center;">
+				<a class="button" href="/projects">See All Projects</a>
+			</div>
+			<div class="featured-project">
+				<ProjectCard
+					src="/img/works/svelte_menu.webp"
+					projectName="Svelte Menu"
+					projectType="Frontend"
+				/>
+				<div class="feature-details">
+					<h2 class="secondary-heading">Featured Project</h2>
+					<h3 class="ternary-heading">Polardot.in A design company website</h3>
+					<p class="paragraph">
+						Prior to this role i was assigned a role of FQA Tester at Babel Media Pvt. Ltd.. In this
+						role i have worked on multiple projects including AAA games. I also have worked in Agile
+						work environment. I am well versed in different testing techniques and tools.Previously,
+						I have done web development to build enhanced UI & UX for emerging companies. I was a
+						freelance web and brand designer and developer, and worked with Polardot.in to help
+						multiple companies to build their digital footprint. I was also an intern at Tech4i Pvt.
+						Ltd.
+					</p>
+					<div class="cta-visit">
+						<button class="button">Visit Site</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
 </main>
 
@@ -213,6 +242,37 @@
 	.expertise-wrapper .ternary-heading {
 		margin-block: 0.7rem;
 	}
+	.work-button {
+		padding-block: 2rem 3.5rem;
+	}
+	.featured-project {
+		display: flex;
+		justify-content: space-between;
+		gap: 2.5rem;
+	}
+	.feature-details {
+		max-width: 50%;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+	.feature-details .secondary-heading {
+		position: relative;
+		margin-left: 20px;
+	}
+	.feature-details .secondary-heading::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		background-color: #656565;
+		transform: translateY(-50%);
+		left: -118px;
+		width: 103px;
+		height: 1px;
+	}
+	.feature-details button {
+		padding-block: 0;
+	}
 
 	@media screen and (max-width: 50em) {
 		.text-name {
@@ -229,6 +289,12 @@
 		}
 		.expertise-wrapper ul {
 			grid-template-columns: 1fr;
+		}
+		.featured-project {
+			flex-direction: column;
+		}
+		.feature-details {
+			max-width: unset;
 		}
 	}
 </style>
