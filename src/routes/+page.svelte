@@ -5,6 +5,10 @@
 	import ProjectCard from '../lib/components/ProjectCard.svelte';
 </script>
 
+<svelte:head>
+	<title>Pritish - Best Website Developer/Designer in India</title>
+</svelte:head>
+
 <main>
 	<section class="hero">
 		<div class="container">
@@ -147,7 +151,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="works margin-block-primary padding-block-primary" id="contact">
+	<section class="contact margin-block-primary padding-block-primary" id="contact">
 		<div class="container">
 			<h1 class="section-heading">Contact me</h1>
 			<div class="contact-wrapper">
@@ -213,7 +217,8 @@
 		font-size: 16px;
 	}
 	.about,
-	.works {
+	.works,
+	.contact {
 		scroll-margin-top: 5em;
 	}
 	.about-wrapper .secondary-heading {
@@ -309,12 +314,20 @@
 		padding: 2.875rem 1.625rem;
 		margin-block: 2.5rem;
 	}
+	#contact {
+		margin-bottom: -350px;
+	}
 	.contacts {
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
 		margin-top: 20px;
 		gap: 2rem;
+	}
+	.contacts .right {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
 	}
 	.contact-wrapper .button {
 		padding-block: 0;

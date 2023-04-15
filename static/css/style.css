@@ -442,3 +442,9 @@ body {
 	background-size: cover;
 	box-shadow: inset 0px -115px 76px -50px black;
 }
+[data-theme='dark'] .footer {
+	background-image: url('../img/footer-pattern.jpg');
+	background-position: center;
+	background-size: cover;
+	box-shadow: inset 0px 275px 76px -50px black;
+}
