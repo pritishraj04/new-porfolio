@@ -160,6 +160,7 @@
 					<div class="left">
 						<button class="button">Send an Instant Query</button>
 					</div>
+					<div class="center"><p>or</p></div>
 					<div class="right">
 						<div class="contact-method">
 							<a class="primary-link" href="mailto:pritishraj04@gmail.com">pritishraj04@gmail.com</a
@@ -319,10 +320,11 @@
 	}
 	.contacts {
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-evenly;
 		align-items: center;
 		margin-top: 20px;
-		gap: 2rem;
+		gap: 1.5rem;
+		overflow: hidden;
 	}
 	.contacts .right {
 		display: flex;
@@ -332,10 +334,7 @@
 	.contact-wrapper .button {
 		padding-block: 0;
 	}
-	.contact-wrapper {
-		position: relative;
-	}
-	.contact-wrapper .left::after {
+	/* .contact-wrapper .left::after {
 		position: absolute;
 		content: 'or';
 		top: 50%;
@@ -343,17 +342,24 @@
 		transform: translate(-50%, -50%);
 		margin-top: 20px;
 		padding: 10px;
+	}*/
+	.contact .center {
+		position: relative;
 	}
-	.contact-wrapper .left::before {
+	.center p::before,
+	.center p::after {
 		position: absolute;
 		content: '';
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%, -50%);
-		background-color: #656565;
 		width: 0.0625rem;
-		margin-top: 20px;
-		height: 60%;
+		height: 5rem;
+	}
+	.center p::before {
+		transform: translate(-50%, -120%);
+	}
+	.center p::after {
+		transform: translate(-50%, 20%);
 	}
 	@media screen and (max-width: 50em) {
 		.text-name {
@@ -381,13 +387,11 @@
 			flex-direction: column;
 			gap: 4rem;
 		}
-		.contact-wrapper .left::after {
-			margin-top: 0;
+		.center p::before {
+			transform: translate(-4rem, -50%) rotate(90deg);
 		}
-		.contact-wrapper .left::before {
-			transform: translate(-50%, -50%) rotate(90deg);
-			margin-top: 0;
-			height: 80%;
+		.center p::after {
+			transform: translate(4rem, -50%) rotate(90deg);
 		}
 	}
 </style>
