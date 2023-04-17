@@ -2,15 +2,13 @@
 	import Logo from '$lib/components/Logo.svelte';
 	import 'iconify-icon';
 	import { page } from '$app/stores';
-	let currentTheme;
-
-	$: currentTheme = $page.data.theme;
+	import { currentTheme } from '$lib/stores';
 </script>
 
 <footer class="footer">
 	<div class="container">
 		<div class="footer-wrapper">
-			<div class="logo"><a href="/"><Logo theme={currentTheme} /></a></div>
+			<div class="logo"><a href="/"><Logo theme={$currentTheme} /></a></div>
 			<nav class="footer-nav">
 				<div class="footer-col col0">
 					<div class="col-options">

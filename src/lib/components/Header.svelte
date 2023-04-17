@@ -1,11 +1,9 @@
 <script>
-	import { enhance } from '$app/forms';
-	import { page } from '$app/stores';
 	import 'iconify-icon';
 	import Logo from '$lib/components/Logo.svelte';
-	let currentTheme;
+	import { onMount } from 'svelte';
+	import { currentTheme } from '$lib/stores';
 	let isMenuOpen = false;
-	$: currentTheme = $page.data.theme;
 	let scrollY;
 
 	const handleCloseMenu = () => {
@@ -14,11 +12,24 @@
 		}
 	};
 
-	const submitUpdateTheme = ({ action }) => {
-		const theme = action.searchParams.get('theme');
+	onMount(() => {
+		const userPrefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
+		const hasUserSetTheme =
+			document.documentElement.dataset.theme == 'dark' ||
+			document.documentElement.dataset.theme == 'light';
+
+		if (!hasUserSetTheme) {
+			updateTheme(userPrefersDarkMode ? 'dark' : 'light');
+		}
+		$currentTheme = document.documentElement.dataset.theme;
+	});
+
+	const updateTheme = (theme) => {
 		if (theme) {
-			document.documentElement.setAttribute('data-theme', theme);
+			document.documentElement.dataset.theme = theme;
+			document.cookie = `colortheme=${theme};max-age=31536000;path="/"`;
+			$currentTheme = theme;
 		}
 	};
 
@@ -32,7 +43,7 @@
 
 <header class={scrollY > 100 || isMenuOpen ? 'bg-primary' : ''}>
 	<div class="container" style={scrollY > 100 ? 'padding-top: 1.5rem;' : ''}>
-		<div class="logo"><a href="/"><Logo theme={currentTheme} /></a></div>
+		<div class="logo"><a href="/"><Logo theme={$currentTheme} /></a></div>
 		<div class="flex">
 			<nav>
 				<ul data-role="list">
@@ -42,18 +53,16 @@
 					</li>
 					<li><a class="button" href="#contact">Contact me</a></li>
 					<li>
-						<form method="POST" use:enhance={submitUpdateTheme}>
-							{#each themes as theme}
-								{#if currentTheme !== theme.name}
-									<button
-										class="button"
-										data-type="ghost"
-										formaction="/?/setTheme&theme={theme.name}&redirectTo={$page.url.pathname}"
-										><iconify-icon icon={theme.icon} style="font-size: 32px;" /></button
-									>
-								{/if}
-							{/each}
-						</form>
+						{#each themes as theme}
+							{#if $currentTheme !== theme.name}
+								<button
+									class="button theme-button"
+									data-type="ghost"
+									on:click={() => updateTheme(theme.name)}
+									><iconify-icon icon={theme.icon} style="font-size: 32px;" /></button
+								>
+							{/if}
+						{/each}
 					</li>
 				</ul>
 			</nav>
@@ -98,6 +107,9 @@
 	}
 	.hamburger-button {
 		display: none;
+	}
+	.theme-button:hover {
+		filter: none;
 	}
 	@media screen and (max-width: 680px) {
 		.flex {
