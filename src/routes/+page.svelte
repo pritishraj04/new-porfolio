@@ -334,15 +334,6 @@
 	.contact-wrapper .button {
 		padding-block: 0;
 	}
-	/* .contact-wrapper .left::after {
-		position: absolute;
-		content: 'or';
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		margin-top: 20px;
-		padding: 10px;
-	}*/
 	.contact .center {
 		position: relative;
 	}

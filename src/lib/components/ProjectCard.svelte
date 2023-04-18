@@ -14,7 +14,8 @@
 		height: 470px;
 		width: 100%;
 		background-position: center;
-		background-size: cover;
+		background-size: contain;
+		background-repeat: no-repeat;
 		position: relative;
 	}
 	.work-details {
