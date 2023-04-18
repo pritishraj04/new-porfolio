@@ -1,5 +1,7 @@
 <script>
 	import 'iconify-icon';
+	import moonFilledAltToSunnyFilledLoopTransition from '@iconify/icons-line-md/moon-filled-alt-to-sunny-filled-loop-transition';
+	import sunnyFilledLoopToMoonAltFilledLoopTransition from '@iconify/icons-line-md/sunny-filled-loop-to-moon-alt-filled-loop-transition';
 	import Logo from '$lib/components/Logo.svelte';
 	import { onMount } from 'svelte';
 	import { currentTheme } from '$lib/stores';
@@ -34,8 +36,8 @@
 	};
 
 	const themes = [
-		{ name: 'light', icon: 'line-md:moon-filled-alt-to-sunny-filled-loop-transition' },
-		{ name: 'dark', icon: 'line-md:sunny-filled-loop-to-moon-alt-filled-loop-transition' }
+		{ name: 'light', icon: moonFilledAltToSunnyFilledLoopTransition },
+		{ name: 'dark', icon: sunnyFilledLoopToMoonAltFilledLoopTransition }
 	];
 </script>
 
