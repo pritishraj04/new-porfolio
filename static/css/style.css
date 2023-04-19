@@ -74,6 +74,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	transition: background-color 400ms linear, color 400ms linear;
 }
 * {
 	font: inherit;
@@ -132,7 +133,6 @@ body {
 	font-family: var(--ff-body);
 	color: var(--clr-neutral-800);
 	background-color: #f6f8f9;
-	transition: background-color 400ms linear, color 400ms linear;
 }
 [data-theme='light'] body {
 	color: var(--clr-neutral-800);
@@ -400,6 +400,8 @@ body {
 	line-height: 0;
 	background-color: transparent;
 	border: 0;
+	backdrop-filter: none;
+	-webkit-backdrop-filter: none;
 }
 .button[data-type='ghost']:hover,
 .button[data-type='ghost']:focus-visible {

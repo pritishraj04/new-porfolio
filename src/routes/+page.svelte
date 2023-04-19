@@ -2,7 +2,7 @@
 	import HeroMarquee from '$lib/components/HeroMarquee.svelte';
 	import 'iconify-icon';
 	import Works from '$lib/components/Works.svelte';
-	import ProjectCard from '../lib/components/ProjectCard.svelte';
+	import ProjectCard from '$lib/components/ProjectCard.svelte';
 </script>
 
 <svelte:head>
@@ -124,28 +124,27 @@
 		<Works />
 		<div class="container">
 			<div class="work-button" style="text-align: center;">
-				<a class="button" href="/projects">See All Projects</a>
+				<a class="button" href="/works">See All Projects</a>
 			</div>
 			<div class="featured-project">
 				<ProjectCard
-					src="/img/works/svelte_menu.webp"
+					projectLink={`/works/food-company-website`}
+					src="/img/works/food-company.webp"
 					projectName="Svelte Menu"
 					projectType="Frontend"
 				/>
 				<div class="feature-details">
 					<h2 class="secondary-heading">Featured Project</h2>
-					<h3 class="ternary-heading">Polardot.in A design company website</h3>
+					<h3 class="ternary-heading">The Only Burger. A QSR Franchise website</h3>
 					<p class="paragraph">
-						Prior to this role i was assigned a role of FQA Tester at Babel Media Pvt. Ltd.. In this
-						role i have worked on multiple projects including AAA games. I also have worked in Agile
-						work environment. I am well versed in different testing techniques and tools.Previously,
-						I have done web development to build enhanced UI & UX for emerging companies. I was a
-						freelance web and brand designer and developer, and worked with Polardot.in to help
-						multiple companies to build their digital footprint. I was also an intern at Tech4i Pvt.
-						Ltd.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas congue euismod quam.
+						Nunc tortor justo, vehicula eu dapibus ac, molestie vitae massa. Aliquam nec rutrum
+						lorem. In sed velit ut lorem consequat auctor in sed eros. Fusce elementum neque velit,
+						id facilisis lorem porttitor at. Sed et pulvinar lectus. Proin a nisi aliquam, aliquet
+						ex nec, ullamcorper magna. Donec ac tincidunt nisl.
 					</p>
 					<div class="cta-visit">
-						<button class="button">Visit Site</button>
+						<a href="/" class="button">Visit Site</a>
 					</div>
 				</div>
 			</div>
@@ -307,9 +306,6 @@
 		left: -118px;
 		width: 103px;
 		height: 1px;
-	}
-	.feature-details button {
-		padding-block: 0;
 	}
 	.contact-wrapper {
 		padding: 2.875rem 1.625rem;

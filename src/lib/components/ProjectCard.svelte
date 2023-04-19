@@ -1,15 +1,23 @@
 <script>
-	export let src, projectType, projectName;
+	export let src,
+		projectType,
+		projectName,
+		projectLink = '/';
 </script>
 
-<div class="work-cover" style={`background-image: url("${src}");`}>
-	<div class="work-details bg-blur-primary">
-		<h3 class="ternary-heading" style="text-align: center;">{projectType}</h3>
-		<h3 class="secondary-heading" style="text-align: center;">{projectName}</h3>
+<a class="project-link" href={projectLink}>
+	<div class="work-cover" style={`background-image: url("${src}");`}>
+		<div class="work-details bg-blur-primary">
+			<h3 class="ternary-heading" style="text-align: center;">{projectType}</h3>
+			<h3 class="secondary-heading" style="text-align: center;">{projectName}</h3>
+		</div>
 	</div>
-</div>
+</a>
 
 <style>
+	.project-link {
+		width: 100%;
+	}
 	.work-cover {
 		height: 470px;
 		width: 100%;

@@ -1,7 +1,6 @@
 <script>
+	import { fade } from 'svelte/transition';
 	import 'iconify-icon';
-	import moonFilledAltToSunnyFilledLoopTransition from '@iconify/icons-line-md/moon-filled-alt-to-sunny-filled-loop-transition';
-	import sunnyFilledLoopToMoonAltFilledLoopTransition from '@iconify/icons-line-md/sunny-filled-loop-to-moon-alt-filled-loop-transition';
 	import Logo from '$lib/components/Logo.svelte';
 	import { onMount } from 'svelte';
 	import { currentTheme } from '$lib/stores';
@@ -36,8 +35,8 @@
 	};
 
 	const themes = [
-		{ name: 'light', icon: moonFilledAltToSunnyFilledLoopTransition },
-		{ name: 'dark', icon: sunnyFilledLoopToMoonAltFilledLoopTransition }
+		{ name: 'light', icon: '/img/svgs/moon-sunny.svg' },
+		{ name: 'dark', icon: '/img/svgs/sunny-moon.svg' }
 	];
 </script>
 
@@ -61,7 +60,7 @@
 									class="button theme-button"
 									data-type="ghost"
 									on:click={() => updateTheme(theme.name)}
-									><iconify-icon icon={theme.icon} style="font-size: 32px;" /></button
+									><img src={theme.icon} alt="" style="width: 32px;" /></button
 								>
 							{/if}
 						{/each}
@@ -73,6 +72,7 @@
 				data-type="ghost"
 				on:click={() => (isMenuOpen = !isMenuOpen)}
 				><iconify-icon
+					transition:fade
 					icon={isMenuOpen
 						? 'line-md:menu-to-close-alt-transition'
 						: 'line-md:close-to-menu-alt-transition'}
