@@ -3,7 +3,7 @@
 	import '@splidejs/svelte-splide/css';
 	import ProjectCard from './ProjectCard.svelte';
 	import works from '$lib/works';
-	const worksOnHomePage = works.splice(0, 8);
+	const worksOnHomePage = works.slice(0, 6);
 	const workOption = {
 		pagination: true,
 		arrows: false,

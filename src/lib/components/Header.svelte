@@ -49,8 +49,8 @@
 			<nav>
 				<ul data-role="list">
 					<li class={isMenuOpen ? 'flex navigation bg-primary' : 'flex navigation nav-hidden'}>
-						<div><a class="link" href="#about" on:click={handleCloseMenu}>About</a></div>
-						<div><a class="link" href="#works" on:click={handleCloseMenu}>Works</a></div>
+						<div><a class="link" href="/#about" on:click={handleCloseMenu}>About</a></div>
+						<div><a class="link" href="/#works" on:click={handleCloseMenu}>Works</a></div>
 					</li>
 					<li><a class="button" href="#contact">Contact me</a></li>
 					<li>
@@ -109,6 +109,10 @@
 	}
 	.hamburger-button {
 		display: none;
+		user-select: none;
+	}
+	.theme-button {
+		user-select: none;
 	}
 	.theme-button:hover {
 		filter: none;
