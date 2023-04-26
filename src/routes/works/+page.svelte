@@ -1,3 +1,12 @@
+<script>
+	import 'iconify-icon';
+	import ProjectCard from '$lib/components/ProjectCard.svelte';
+</script>
+
+<svelte:head>
+	<title>Works | Pritish - Best Website Developer/Designer in India</title>
+</svelte:head>
+
 <main>
 	<section>
 		<div class="container">

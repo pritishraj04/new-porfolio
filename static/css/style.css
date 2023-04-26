@@ -20,6 +20,9 @@
 	--clr-info: hsl(221, 61%, 35%);
 	--clr-success: hsl(117, 57%, 41%);
 
+	--clr-fullstack: hsla(142, 75%, 42%, 0.566);
+	--clr-frontend: hsla(216, 72%, 39%, 0.566);
+
 	/* font family */
 	--ff-primary: Montserrat, 'Segoe UI', sans-serif;
 
@@ -111,7 +114,7 @@ body {
 img,
 picture,
 svg {
-	max-width: 100%;
+	width: 100%;
 	display: block;
 }
 /* @media (prefers-reduced-motion: reduce) {

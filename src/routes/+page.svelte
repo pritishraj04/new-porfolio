@@ -1,7 +1,7 @@
 <script>
 	import HeroMarquee from '$lib/components/HeroMarquee.svelte';
 	import 'iconify-icon';
-	import Works from '$lib/components/Works.svelte';
+	import ProjectCarousel from '$lib/components/ProjectCarousel.svelte';
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
 </script>
 
@@ -121,18 +121,15 @@
 				<h2 class="secondary-heading">I've Created these, please have a look</h2>
 			</div>
 		</div>
-		<Works />
+		<ProjectCarousel />
 		<div class="container">
 			<div class="work-button" style="text-align: center;">
 				<a class="button" href="/works">See All Projects</a>
 			</div>
 			<div class="featured-project">
-				<ProjectCard
-					projectLink={`/works/food-company-website`}
-					src="/img/works/food-company.webp"
-					projectName="Svelte Menu"
-					projectType="Frontend"
-				/>
+				<div class="featured-image">
+					<img src="/img/works/food-company.webp" alt="The Only Burger" />
+				</div>
 				<div class="feature-details">
 					<h2 class="secondary-heading">Featured Project</h2>
 					<h3 class="ternary-heading">The Only Burger. A QSR Franchise website</h3>
@@ -287,8 +284,13 @@
 		justify-content: space-between;
 		gap: 2.5rem;
 	}
+	.featured-project img {
+		object-position: center;
+		object-fit: contain;
+		position: relative;
+	}
 	.feature-details {
-		max-width: 50%;
+		max-width: 40%;
 		display: flex;
 		flex-direction: column;
 		gap: 20px;

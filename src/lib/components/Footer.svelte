@@ -1,7 +1,6 @@
 <script>
 	import Logo from '$lib/components/Logo.svelte';
 	import 'iconify-icon';
-	import { page } from '$app/stores';
 	import { currentTheme } from '$lib/stores';
 </script>
 
@@ -66,6 +65,9 @@
 <style>
 	.footer {
 		padding-top: 25rem;
+	}
+	.logo {
+		display: flex;
 	}
 	.footer-nav {
 		display: grid;

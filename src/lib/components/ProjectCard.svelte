@@ -1,38 +1,65 @@
 <script>
-	export let src,
-		projectType,
+	export let projectImg,
+		projectCategory,
 		projectName,
+		projectDesc,
 		projectLink = '/';
 </script>
 
-<a class="project-link" href={projectLink}>
-	<div class="work-cover" style={`background-image: url("${src}");`}>
-		<div class="work-details bg-blur-primary">
-			<h3 class="ternary-heading" style="text-align: center;">{projectType}</h3>
-			<h3 class="secondary-heading" style="text-align: center;">{projectName}</h3>
-		</div>
+<div class="project-card bg-blur-primary">
+	<div class="project-image">
+		<img src={projectImg} alt={`Image for ${projectName}`} />
+		<button class={'button project-category cat-' + projectCategory}>{projectCategory}</button>
 	</div>
-</a>
+	<div class="project-head">
+		<h2 class="ternary-heading">{projectName}</h2>
+	</div>
+	<div class="project-details">
+		<p class="paragraph">{projectDesc.slice(0, 140)}...</p>
+	</div>
+	<div class="project-actions">
+		<a href={projectLink} class="button">View</a>
+	</div>
+</div>
 
 <style>
-	.project-link {
-		width: 100%;
+	.project-card {
+		border-radius: 10px;
+		backdrop-filter: blur(10px);
+		padding: 10px;
+		height: 100%;
 	}
-	.work-cover {
-		height: 470px;
-		width: 100%;
-		background-position: center;
-		background-size: contain;
-		background-repeat: no-repeat;
+	.project-image {
+		position: relative;
+		border-radius: 10px;
+		overflow: hidden;
+	}
+	.project-category {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		padding: 0 8px;
+		font-size: 10px;
+	}
+	.cat-fullstack {
+		background-color: var(--clr-fullstack);
+	}
+	.cat-frontend {
+		background-color: var(--clr-frontend);
+	}
+	.project-image img {
+		object-position: center;
+		object-fit: contain;
 		position: relative;
 	}
-	.work-details {
-		position: absolute;
-		bottom: 10%;
-		left: 50%;
-		width: 100%;
-		padding-block: 20px;
-		transform: translateX(-50%);
-		backdrop-filter: blur(10px);
+	.project-head {
+		margin-top: 20px;
+	}
+	.project-details {
+		margin-top: 10px;
+		min-height: 5rem;
+	}
+	.project-actions {
+		text-align: end;
 	}
 </style>
