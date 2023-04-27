@@ -3,6 +3,7 @@
 	import 'iconify-icon';
 	import Logo from '$lib/components/Logo.svelte';
 	import { onMount } from 'svelte';
+	// import { browser } from '$app/environment';
 	import { currentTheme } from '$lib/stores';
 	let isMenuOpen = false;
 	let scrollY;
@@ -38,6 +39,8 @@
 		{ name: 'light', icon: '/img/svgs/moon-sunny.svg' },
 		{ name: 'dark', icon: '/img/svgs/sunny-moon.svg' }
 	];
+
+	// $: if (browser) document.body.classList.toggle('noscroll', isMenuOpen);
 </script>
 
 <svelte:window bind:scrollY />

@@ -8,7 +8,7 @@
 
 <div class="project-card bg-blur-primary">
 	<div class="project-image">
-		<img src={projectImg} alt={`Image for ${projectName}`} />
+		<img src={projectImg} alt={`Image for ${projectName}`} loading="lazy" />
 		<button class={'button project-category cat-' + projectCategory}>{projectCategory}</button>
 	</div>
 	<div class="project-head">

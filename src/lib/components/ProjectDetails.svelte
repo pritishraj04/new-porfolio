@@ -4,7 +4,7 @@
 
 <div class="project">
 	<div class="project-image">
-		<img src={`/img/works/${img}`} alt={`Image for ${title}`} />
+		<img src={`/img/works/${img}`} alt={`Image for ${title}`} loading="lazy" />
 	</div>
 	<div class="project-details">
 		<h2 class="secondary-heading">{title}</h2>

@@ -89,7 +89,7 @@
 				<div class="secondary-heading">My Expertise</div>
 				<ul data-role="list">
 					<li>
-						<iconify-icon icon="icons8:idea" style="font-size: 96px" />
+						<iconify-icon icon="game-icons:materials-science" style="font-size: 96px;" />
 						<h5 class="ternary-heading">Digital Products</h5>
 						<p class="paragraph">
 							Web design encompasses many different skills and diciplines in the production of all
@@ -97,7 +97,7 @@
 						</p>
 					</li>
 					<li>
-						<iconify-icon icon="tabler:device-tablet" style="font-size: 96px" />
+						<iconify-icon icon="material-symbols:ambient-screen-rounded" style="font-size: 96px" />
 						<h5 class="ternary-heading">UI-UX Design</h5>
 						<p class="paragraph">
 							Web design encompasses many different skills and diciplines in the production of all
@@ -105,7 +105,7 @@
 						</p>
 					</li>
 					<li>
-						<iconify-icon icon="iconoir:dev-mode-laptop" style="font-size: 96px" />
+						<iconify-icon icon="solar:devices-bold-duotone" style="font-size: 96px" />
 						<h5 class="ternary-heading">Web Development</h5>
 						<p class="paragraph">
 							Web design encompasses many different skills and diciplines in the production of all
