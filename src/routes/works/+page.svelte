@@ -3,7 +3,6 @@
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
 	import ContactSection from '$lib/components/ContactSection.svelte';
 	import works from '$lib/works';
-	console.log(works);
 </script>
 
 <svelte:head>

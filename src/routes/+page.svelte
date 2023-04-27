@@ -3,6 +3,8 @@
 	import 'iconify-icon';
 	import ProjectCarousel from '$lib/components/ProjectCarousel.svelte';
 	import ContactSection from '$lib/components/ContactSection.svelte';
+	import works from '$lib/works';
+	const worksOnHomePage = works.slice(0, 6);
 </script>
 
 <svelte:head>
@@ -121,7 +123,7 @@
 				<h2 class="secondary-heading">I've Created these, please have a look</h2>
 			</div>
 		</div>
-		<ProjectCarousel />
+		<ProjectCarousel works={worksOnHomePage} />
 		<div class="container">
 			<div class="work-button" style="text-align: center;">
 				<a class="button" href="/works">See All Projects</a>
@@ -151,10 +153,6 @@
 </main>
 
 <style>
-	/* .hero {
-		height: 100vh;
-		height: 100dvh;
-	} */
 	.hero-wrapper {
 		padding-top: 37.5vh;
 		max-width: 489px;

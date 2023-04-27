@@ -2,8 +2,7 @@
 	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
 	import '@splidejs/svelte-splide/css';
 	import ProjectCard from './ProjectCard.svelte';
-	import works from '$lib/works';
-	const worksOnHomePage = works.slice(0, 6);
+	export let works = [];
 	const workOption = {
 		pagination: true,
 		arrows: false,
@@ -29,10 +28,10 @@
 <div class="container-fluid">
 	<Splide hasTrack={false} options={workOption} aria-labelledby="Works Carsourel">
 		<SplideTrack>
-			{#each worksOnHomePage as work}
+			{#each works as work}
 				<SplideSlide>
 					<ProjectCard
-						projectImg={`./img/works/${work.img}`}
+						projectImg={`/img/works/${work.img}`}
 						projectName={work.title}
 						projectDesc={work.desc}
 						projectCategory={work.category}

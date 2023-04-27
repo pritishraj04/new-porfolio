@@ -31,7 +31,7 @@
 	}
 	.project-image {
 		position: relative;
-		border-radius: 10px;
+		border-radius: 6px;
 		overflow: hidden;
 	}
 	.project-category {

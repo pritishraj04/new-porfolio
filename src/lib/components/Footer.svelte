@@ -68,6 +68,7 @@
 	}
 	.logo {
 		display: flex;
+		justify-content: start;
 	}
 	.footer-nav {
 		display: grid;

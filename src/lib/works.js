@@ -4,30 +4,30 @@ const works = [
 		title: 'Property Listing Project',
 		slug: 'property-listing-project',
 		category: 'fullstack',
-		tech: ['HTML', 'CSS'],
+		tech: ['Sveltekit', 'Prisma', 'CSS'],
 		img: 'property-listing.webp',
-		link: '',
-		desc: ''
+		link: 'https://property-listing-livid.vercel.app/',
+		desc: "Full Stack project Property Listing made using Sveltekit, CSS as frontend & Prisma, SQLite as backend. This project focuses on quick login/register system integration and list customer's properties on this website. In this website customer can also shortlist listed properties without need of signup/login."
 	},
 	{
 		id: 2,
 		title: 'Food dashboard project',
 		slug: 'food-dashboard-project',
 		category: 'fullstack',
-		tech: ['HTML', 'CSS'],
+		tech: ['Sveltekit', 'Supabase', 'MongoDB', 'Prisma', 'CSS'],
 		img: 'food-dashboard.webp',
-		link: '',
-		desc: ''
+		link: 'http://fooddashboardproject.vercel.app/',
+		desc: 'Full Stack project Food dashboard made using Sveltekit, CSS as frontend & Supabase, MongoDB, Prisma as backend. This project focuses on quick login/register system integration. After user successful login into this system he/she can perform CRUD action and handle every aspect of a restaurant. This project also features odering and account system.'
 	},
 	{
 		id: 3,
 		title: 'Food Company Website',
 		slug: 'food-company-website',
 		category: 'fullstack',
-		tech: ['HTML', 'CSS'],
+		tech: ['Sveltekit', 'Supabase', 'MongoDB', 'Prisma', 'CSS'],
 		img: 'food-company.webp',
-		link: '',
-		desc: ''
+		link: 'https://foodfrontendproject.vercel.app/',
+		desc: 'Full Stack project Food Company Website made using Sveltekit, CSS as frontend & , Supabase, MongoDB, Prisma, as backend. This project focuses on quick login/register system integration. User can view restaurnat offering on this website without need of signup/login. However after susseful login user can order food from this website at anywhere near the admin specifed location. This project also features odering and account system.'
 	},
 	{
 		id: 4,
