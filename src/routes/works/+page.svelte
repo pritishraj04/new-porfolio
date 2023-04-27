@@ -3,6 +3,33 @@
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
 	import ContactSection from '$lib/components/ContactSection.svelte';
 	import works from '$lib/works';
+
+	let isFocus = false;
+	let searchText = '';
+	let selectedCategory = 'all';
+	let result = works;
+	const searchWorks = (query) => {
+		selectedCategory = 'all';
+		result = works.filter(
+			(el) =>
+				el.title.toLowerCase().includes(query.toLowerCase()) ||
+				el.category.toLowerCase().includes(query.toLowerCase())
+		);
+	};
+	const filterBycategory = () => {
+		searchText = '';
+		switch (selectedCategory) {
+			case 'frontend':
+				result = works.filter((el) => el.category === 'frontend');
+				break;
+			case 'fullstack':
+				result = works.filter((el) => el.category === 'fullstack');
+				break;
+			default:
+				result = works;
+				break;
+		}
+	};
 </script>
 
 <svelte:head>
@@ -36,8 +63,25 @@
 		<div class="container">
 			<div class="work-wrapper">
 				<div class="filters">
-					<input type="text" class="text-field" placeholder="Type to start searching..." />
-					<select class="select" name="filter" id="filter"
+					<input
+						type="text"
+						class="text-field"
+						placeholder="Type to start searching..."
+						on:focus={() => {
+							isFocus = true;
+						}}
+						on:blur={() => {
+							isFocus = false;
+						}}
+						bind:value={searchText}
+						on:keyup={() => searchWorks(searchText)}
+					/>
+					<select
+						class="select"
+						name="filter"
+						id="filter"
+						bind:value={selectedCategory}
+						on:change={filterBycategory}
 						><option value="all">All</option><option value="frontend">Frontend</option><option
 							value="fullstack">Fullstack</option
 						></select
@@ -49,7 +93,7 @@
 					>
 				</div>
 				<div class="projects">
-					{#each works as work}
+					{#each result as work}
 						<ProjectCard
 							projectImg={`./img/works/${work.img}`}
 							projectName={work.title}
@@ -57,6 +101,12 @@
 							projectCategory={work.category}
 							projectLink={`/works/${work.slug}`}
 						/>
+					{:else}
+						<div class="no-project bg-blur bg-blur-primary">
+							<h2 class="ternary-heading">No items found. Try removing filters.</h2>
+							<p class="paragraph">Or click here:</p>
+							<a href="/" class="primary-link">Home</a>
+						</div>
 					{/each}
 				</div>
 			</div>
@@ -81,6 +131,15 @@
 		display: grid;
 		gap: 21px;
 		grid-template-columns: repeat(4, 1fr);
+	}
+	.no-project {
+		text-align: center;
+		padding: 20px 10px;
+		border-radius: 10px;
+		display: flex;
+		flex-direction: column;
+		gap: 0.6rem;
+		grid-column: 1 / -1;
 	}
 	@media screen and (max-width: 991px) {
 		.projects {
