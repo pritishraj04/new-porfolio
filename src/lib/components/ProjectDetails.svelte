@@ -4,7 +4,7 @@
 
 <div class="project">
 	<div class="project-image">
-		<img src={`/img/works/${img}`} alt={`Image for ${title}`} loading="lazy" />
+		<img src={`/img/works/${img}`} alt={`Image for ${title}`} />
 	</div>
 	<div class="project-details">
 		<h2 class="secondary-heading">{title}</h2>
@@ -35,12 +35,12 @@
 		gap: 2.5rem;
 	}
 	.project-image {
-		border-radius: 10px;
 		overflow: hidden;
 	}
 	.project img {
 		object-position: center;
 		object-fit: contain;
+		border-radius: 10px;
 	}
 	.project-details {
 		min-width: 45%;

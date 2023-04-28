@@ -1,7 +1,7 @@
 <section class="contact margin-block-primary padding-block-primary" id="contact">
 	<div class="container">
 		<h1 class="section-heading">Contact me</h1>
-		<div class="contact-wrapper">
+		<div class="contact-wrapper bg-blur bg-blur-primary">
 			<h2 class="secondary-heading">Get in touch.</h2>
 			<div class="contacts">
 				<div class="left">
@@ -38,6 +38,7 @@
 	.contact-wrapper {
 		padding: 2.875rem 1.625rem;
 		margin-block: 2.5rem;
+		border-radius: 10px;
 	}
 	#contact {
 		margin-bottom: -350px;

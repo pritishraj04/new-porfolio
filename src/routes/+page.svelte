@@ -130,20 +130,23 @@
 			</div>
 			<div class="featured-project">
 				<div class="featured-image">
-					<img src="/img/works/food-company.webp" alt="The Only Burger" />
+					<img src="/img/works/food-company.webp" alt="The Only Burger" loading="lazy" />
 				</div>
 				<div class="feature-details">
 					<h2 class="secondary-heading">Featured Project</h2>
-					<h3 class="ternary-heading">The Only Burger. A QSR Franchise website</h3>
+					<h3 class="ternary-heading">The Only Burger. A QSR Franchise</h3>
 					<p class="paragraph">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas congue euismod quam.
-						Nunc tortor justo, vehicula eu dapibus ac, molestie vitae massa. Aliquam nec rutrum
-						lorem. In sed velit ut lorem consequat auctor in sed eros. Fusce elementum neque velit,
-						id facilisis lorem porttitor at. Sed et pulvinar lectus. Proin a nisi aliquam, aliquet
-						ex nec, ullamcorper magna. Donec ac tincidunt nisl.
+						Full Stack project Food Company Website made using Sveltekit, CSS as frontend & ,
+						Supabase, MongoDB, Prisma, as backend. This project focuses on quick login/register
+						system integration. User can view restaurnat offering on this website without need of
+						signup/login. However after susseful login user can order food from this website at
+						anywhere near the admin specifed location. This project also features odering and
+						account system.
 					</p>
 					<div class="cta-visit">
-						<a href="/" class="button">Visit Site</a>
+						<a href="https://foodfrontendproject.vercel.app/" target="_blank" class="button"
+							>Visit Site</a
+						>
 					</div>
 				</div>
 			</div>
@@ -200,6 +203,9 @@
 	.expertise-wrapper .secondary-heading {
 		font-weight: var(--fw-semi-bold);
 	}
+	.expertise-wrapper ul li {
+		border-radius: 10px;
+	}
 	.history-wrapper ul {
 		margin-block: 1rem;
 		margin-left: 0.85rem;
@@ -248,6 +254,10 @@
 		display: flex;
 		justify-content: space-between;
 		gap: 2.5rem;
+	}
+	.featured-image {
+		border-radius: 10px;
+		overflow: hidden;
 	}
 	.featured-project img {
 		object-position: center;
