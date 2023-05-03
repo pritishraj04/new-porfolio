@@ -3,7 +3,6 @@
 	import 'iconify-icon';
 	import Logo from '$lib/components/Logo.svelte';
 	import { onMount } from 'svelte';
-	// import { browser } from '$app/environment';
 	import { currentTheme } from '$lib/stores';
 	let isMenuOpen = false;
 	let scrollY;
@@ -39,15 +38,13 @@
 		{ name: 'light', icon: '/img/svgs/moon-sunny.svg' },
 		{ name: 'dark', icon: '/img/svgs/sunny-moon.svg' }
 	];
-
-	// $: if (browser) document.body.classList.toggle('noscroll', isMenuOpen);
 </script>
 
 <svelte:window bind:scrollY />
 
-<header class={scrollY > 100 || isMenuOpen ? 'bg-primary' : ''}>
+<header class={scrollY > 100 || isMenuOpen ? 'bg-primary on-top' : ''}>
 	<div class="container" style={scrollY > 100 ? 'padding-top: 1.5rem;' : ''}>
-		<div class="logo"><a href="/"><Logo theme={$currentTheme} /></a></div>
+		<div class="logo"><a href="/" aria-label="Home"><Logo theme={$currentTheme} /></a></div>
 		<div class="flex">
 			<nav>
 				<ul data-role="list">
@@ -62,8 +59,9 @@
 								<button
 									class="button theme-button"
 									data-type="ghost"
+									aria-label={`Theme button ${theme.name}`}
 									on:click={() => updateTheme(theme.name)}
-									><img src={theme.icon} alt="" style="width: 32px;" /></button
+									><img aria-hidden="true" src={theme.icon} alt="" style="width: 32px;" /></button
 								>
 							{/if}
 						{/each}
@@ -73,6 +71,7 @@
 			<button
 				class="hamburger-button button"
 				data-type="ghost"
+				aria-label={`Hamburger Menu button ${isMenuOpen ? 'open' : 'close'}`}
 				on:click={() => (isMenuOpen = !isMenuOpen)}
 				><iconify-icon
 					transition:fade
@@ -90,7 +89,9 @@
 	header {
 		position: fixed;
 		width: 100%;
-		z-index: 9999;
+	}
+	.on-top {
+		z-index: 99;
 	}
 	header .container {
 		display: flex;

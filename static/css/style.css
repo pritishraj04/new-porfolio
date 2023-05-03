@@ -524,16 +524,6 @@ body {
 	-webkit-backdrop-filter: blur(30px);
 	transition: background-color 300ms linear, color 300ms linear;
 }
-.overlay {
-	position: absolute;
-	z-index: 99999;
-	top: 0;
-	left: 0;
-	width: 100%;
-	min-height: 100vh;
-	background-color: rgba(0, 0, 0, 0.3);
-	backdrop-filter: blur(2px);
-}
 .site-head-wrapper {
 	padding-block: 200px 40px;
 	max-width: 570px;
