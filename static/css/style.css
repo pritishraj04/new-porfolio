@@ -539,7 +539,7 @@ body {
 }
 
 [data-theme='dark'] .hero {
-	background-image: url('../img/hero-pattern-dark.webp');
+	background-image: url('../img/hero-pattern-dark.jpg');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -547,7 +547,7 @@ body {
 	transition: background-image 300ms linear, box-shadow 300ms linear;
 }
 [data-theme='dark'] .site-head {
-	background-image: url('../img/site-pattern-dark.webp');
+	background-image: url('../img/site-pattern-dark.jpg');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -555,7 +555,7 @@ body {
 	transition: background-image 300ms linear, box-shadow 300ms linear;
 }
 [data-theme='dark'] .footer {
-	background-image: url('../img/footer-pattern-dark.webp');
+	background-image: url('../img/footer-pattern-dark.jpg');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -563,7 +563,7 @@ body {
 	transition: background-image 300ms linear, box-shadow 300ms linear;
 }
 [data-theme='light'] .hero {
-	background-image: url('../img/pattern-light.webp');
+	background-image: url('../img/pattern-light.jpg');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -571,7 +571,7 @@ body {
 	transition: background-image 300ms linear, box-shadow 300ms linear;
 }
 [data-theme='light'] .site-head {
-	background-image: url('../img/pattern-light.webp');
+	background-image: url('../img/pattern-light.jpg');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -579,7 +579,7 @@ body {
 	transition: background-image 300ms linear, box-shadow 300ms linear;
 }
 [data-theme='light'] .footer {
-	background-image: url('../img/pattern-light.webp');
+	background-image: url('../img/pattern-light.jpg');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;

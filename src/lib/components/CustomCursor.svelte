@@ -12,6 +12,11 @@
 
 	function handleMousemove(e) {
 		coords.set({ x: e.clientX, y: e.clientY });
+		if (e.target.nodeName === 'A' || e.target.nodeName === 'BUTTON') {
+			size.set(0);
+		} else {
+			size.set(1);
+		}
 		e.stopPropagation();
 		e.cancelBubble = true;
 	}
