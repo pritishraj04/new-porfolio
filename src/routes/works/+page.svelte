@@ -3,33 +3,34 @@
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
 	import ContactSection from '$lib/components/ContactSection.svelte';
 	import works from '$lib/works';
+	import { selectedCategory } from '$lib/stores';
 
 	let isFocus = false;
 	let searchText = '';
-	let selectedCategory = 'all';
+	$selectedCategory = 'all';
 	let result = works;
 	const searchWorks = (query) => {
-		selectedCategory = 'all';
+		$selectedCategory = 'all';
 		result = works.filter(
 			(el) =>
 				el.title.toLowerCase().includes(query.toLowerCase()) ||
 				el.category.toLowerCase().includes(query.toLowerCase())
 		);
 	};
-	const filterBycategory = () => {
-		searchText = '';
-		switch (selectedCategory) {
-			case 'frontend':
-				result = works.filter((el) => el.category === 'frontend');
-				break;
-			case 'fullstack':
-				result = works.filter((el) => el.category === 'fullstack');
-				break;
-			default:
-				result = works;
-				break;
-		}
-	};
+	$: switch ($selectedCategory) {
+		case 'frontend':
+			searchText = '';
+			result = works.filter((el) => el.category === 'frontend');
+			break;
+		case 'fullstack':
+			searchText = '';
+			result = works.filter((el) => el.category === 'fullstack');
+			break;
+		default:
+			searchText = '';
+			result = works;
+			break;
+	}
 </script>
 
 <svelte:head>
@@ -76,12 +77,7 @@
 						bind:value={searchText}
 						on:keyup={() => searchWorks(searchText)}
 					/>
-					<select
-						class="select"
-						name="filter"
-						id="filter"
-						bind:value={selectedCategory}
-						on:change={filterBycategory}
+					<select class="select" name="filter" id="filter" bind:value={$selectedCategory}
 						><option value="all">All</option><option value="frontend">Frontend</option><option
 							value="fullstack">Fullstack</option
 						></select

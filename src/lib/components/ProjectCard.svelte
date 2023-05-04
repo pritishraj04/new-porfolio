@@ -1,15 +1,25 @@
 <script>
+	import { goto } from '$app/navigation';
+	import { selectedCategory } from '$lib/stores';
 	export let projectImg,
 		projectCategory,
 		projectName,
 		projectDesc,
 		projectLink = '/';
+
+	const handleNavigateCategory = async (category) => {
+		await goto('/works');
+		$selectedCategory = category;
+	};
 </script>
 
 <div class="project-card bg-blur-primary">
 	<div class="project-image">
 		<img src={projectImg} alt={`Image for ${projectName}`} loading="lazy" />
-		<button class={'button project-category cat-' + projectCategory}>{projectCategory}</button>
+		<button
+			on:click={handleNavigateCategory(projectCategory)}
+			class={'button project-category cat-' + projectCategory}>{projectCategory}</button
+		>
 	</div>
 	<div class="project-head">
 		<h2 class="ternary-heading">{projectName}</h2>
