@@ -7,6 +7,7 @@
 
 	let isFocus = false;
 	let searchText = '';
+	let sorting = 'relevance';
 	$selectedCategory = 'all';
 	let result = works;
 	const searchWorks = (query) => {
@@ -30,6 +31,16 @@
 			searchText = '';
 			result = works;
 			break;
+	}
+
+	$: if (sorting === 'newestFirst') {
+		result = result.sort(function (a, b) {
+			return b.orderByNew - a.orderByNew;
+		});
+	} else {
+		result = result.sort(function (a, b) {
+			return b.id - a.id;
+		});
 	}
 </script>
 
@@ -82,14 +93,14 @@
 							value="fullstack">Fullstack</option
 						></select
 					>
-					<select class="select" name="shorting" id="shorting"
+					<select class="select" name="shorting" id="shorting" bind:value={sorting}
 						><option value="relevance">Relevance</option><option value="newestFirst"
 							>Newest First</option
 						></select
 					>
 				</div>
 				<div class="projects">
-					{#each result as work}
+					{#each result as work, id}
 						<ProjectCard
 							projectImg={`./img/works/${work.img}`}
 							projectName={work.title}
