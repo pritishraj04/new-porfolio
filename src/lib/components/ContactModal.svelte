@@ -13,7 +13,7 @@
 	<form
 		name="contact"
 		autocomplete="off"
-		action="/contact/success"
+		action="/success"
 		method="POST"
 		data-netlify="true"
 		data-netlify-honeypot="bot-field"
