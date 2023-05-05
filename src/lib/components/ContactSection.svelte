@@ -1,3 +1,7 @@
+<script>
+	import { contactModal } from '$lib/stores';
+</script>
+
 <section class="contact margin-block-primary padding-block-primary" id="contact">
 	<div class="container">
 		<h1 class="section-heading">Contact me</h1>
@@ -5,7 +9,12 @@
 			<h2 class="secondary-heading">Get in touch.</h2>
 			<div class="contacts">
 				<div class="left">
-					<button class="button">Send an Instant Query</button>
+					<button
+						on:click={() => {
+							$contactModal = true;
+						}}
+						class="button">Send an Instant Query</button
+					>
 				</div>
 				<div class="center"><p>or</p></div>
 				<div class="right">

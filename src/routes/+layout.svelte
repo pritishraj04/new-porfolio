@@ -3,6 +3,7 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import PageTransition from '$lib/components/PageTransition.svelte';
 	import CustomCursor from '$lib/components/CustomCursor.svelte';
+	import ContactModal from '../lib/components/ContactModal.svelte';
 	export let data;
 </script>
 
@@ -12,4 +13,5 @@
 		<slot />
 	</PageTransition>
 	<Footer />
+	<ContactModal />
 </CustomCursor>
