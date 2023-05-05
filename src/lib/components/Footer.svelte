@@ -11,14 +11,24 @@
 			<nav class="footer-nav">
 				<div class="footer-col col0">
 					<div class="col-options">
-						<a class="link" href="/" aria-label="Instagram"
+						<a
+							class="link"
+							href="https://www.instagram.com/pritishraj04/"
+							target="_blank"
+							aria-label="Instagram profile"
 							><iconify-icon icon="mdi:instagram" style="font-size: 24px" /></a
 						>
-						<a class="link" aria-label="Linkedin" href="/"
-							><iconify-icon icon="mdi:linkedin" style="font-size: 24px" /></a
+						<a
+							class="link"
+							aria-label="Linkedin profile"
+							href="https://www.linkedin.com/in/pritishraj04/"
+							target="_blank"><iconify-icon icon="mdi:linkedin" style="font-size: 24px" /></a
 						>
-						<a class="link" aria-label="Github" href="/"
-							><iconify-icon icon="mdi:git" style="font-size: 24px" /></a
+						<a
+							class="link"
+							aria-label="Github profile"
+							href="https://github.com/pritishraj04"
+							target="_blank"><iconify-icon icon="mdi:git" style="font-size: 24px" /></a
 						>
 					</div>
 				</div>

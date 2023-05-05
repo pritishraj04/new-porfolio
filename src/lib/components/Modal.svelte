@@ -32,7 +32,12 @@
 		<div class="head">
 			<h2 class="secondary-heading">{heading}</h2>
 			<!-- svelte-ignore a11y-autofocus -->
-			<button autofocus data-type="ghost" class="button" on:click={closeModal}
+			<button
+				autofocus
+				data-type="ghost"
+				class="button"
+				aria-label="Close modal"
+				on:click={closeModal}
 				><iconify-icon icon="solar:close-square-bold" style="font-size: 32px" /></button
 			>
 		</div>
