@@ -75,19 +75,25 @@
 		<div class="container">
 			<div class="work-wrapper">
 				<div class="filters">
-					<input
-						type="text"
-						class="text-field"
-						placeholder="Type to start searching..."
-						on:focus={() => {
-							isFocus = true;
-						}}
-						on:blur={() => {
-							isFocus = false;
-						}}
-						bind:value={searchText}
-						on:keyup={() => searchWorks(searchText)}
-					/>
+					<label for="search" class="inp">
+						<input
+							type="text"
+							id="search"
+							class="text-field"
+							placeholder="&nbsp;"
+							on:focus={() => {
+								isFocus = true;
+							}}
+							on:blur={() => {
+								isFocus = false;
+							}}
+							bind:value={searchText}
+							on:keyup={() => searchWorks(searchText)}
+						/>
+						<span class="label">Search</span>
+						<span class="focus-bg" />
+					</label>
+
 					<select class="select" name="filter" id="filter" bind:value={$selectedCategory}
 						><option value="all">All</option><option value="frontend">Frontend</option><option
 							value="fullstack">Fullstack</option

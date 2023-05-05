@@ -471,19 +471,43 @@ body {
 .link:focus-visible {
 	color: var(--clr-accent-400);
 }
+.inp {
+	position: relative;
+	margin: auto;
+	overflow: hidden;
+	width: 100%;
+}
+.inp .label {
+	position: absolute;
+	top: 22px;
+	left: 17px;
+	font-size: var(--fs-button);
+	font-weight: var(--fw-semi-bold);
+	transform-origin: 0 0;
+	transform: translate3d(0, 0, 0);
+	transition: all 0.2s ease;
+	pointer-events: none;
+}
+[data-theme='light'] .inp .label {
+	color: var(--clr-neutral-700);
+}
+[data-theme='dark'] .inp .label {
+	color: var(--clr-neutral-500);
+}
 .text-field {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 	border: 0;
+	width: 100%;
 	border-radius: 10px;
-	padding-inline: 1.805em;
+	padding: 16px 12px 0 12px;
 	font-weight: var(--fw-semi-bold);
 	font-size: var(--fs-button);
 	line-height: 3.5;
 	background-color: rgba(149, 149, 149, 0.35);
 	color: var(--clr-neutral-100);
-}
-.text-field:hover,
-.text-field:focus-visible {
-	filter: brightness(150%);
+	transition: all 0.15s ease;
 }
 [data-theme='light'] .text-field {
 	background-color: rgba(149, 149, 149, 0.35);
@@ -498,6 +522,53 @@ body {
 	backdrop-filter: saturate(180%) blur(30px);
 	-webkit-backdrop-filter: blur(30px);
 	transition: background-color 300ms linear, color 300ms linear;
+}
+[data-theme='light'] .text-field:hover {
+	background-color: rgba(0, 0, 0, 0.04);
+}
+[data-theme='dark'] .text-field:hover {
+	background-color: rgba(255, 255, 255, 0.26);
+}
+.inp input:not(:-moz-placeholder-shown) + .label {
+	transform: translate3d(0, -12px, 0) scale(0.75);
+}
+.inp input:not(:-ms-input-placeholder) + .label {
+	transform: translate3d(0, -12px, 0) scale(0.75);
+}
+.inp input:not(:placeholder-shown) + .label {
+	transform: translate3d(0, -12px, 0) scale(0.75);
+}
+.inp input:focus {
+	outline: none;
+	box-shadow: inset 0 -2px 0 var(--clr-accent-400);
+}
+[data-theme='light'] .inp input:focus {
+	background-color: rgba(0, 0, 0, 0.05);
+}
+[data-theme='dark'] .inp input:focus {
+	background-color: rgba(255, 255, 255, 0.05);
+}
+.inp .focus-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	transform: scaleX(0);
+	transform-origin: left;
+}
+[data-theme='light'] .inp .focus-bg {
+	background-color: rgba(0, 0, 0, 0.05);
+}
+[data-theme='dark'] .inp .focus-bg {
+	background-color: rgba(255, 255, 255, 0.05);
+}
+.inp input:focus + .label {
+	color: var(--clr-accent-400);
+	transform: translate3d(0, -12px, 0) scale(0.75);
+}
+.inp input:focus + .label + .focus-bg {
+	transform: scaleX(1);
+	transition: all 0.1s ease;
 }
 .select,
 .select option {
