@@ -36,8 +36,8 @@
 					<h3 class="col-header ternary-heading">Links</h3>
 					<div class="col-options">
 						<a class="link" href="/">Home</a>
-						<a class="link" href="#about">About</a>
-						<a class="link" href="#works">Works</a>
+						<a class="link" href="/#about">About</a>
+						<a class="link" href="/#works">Works</a>
 						<a class="link" href="#contact">Contact Me</a>
 					</div>
 				</div>

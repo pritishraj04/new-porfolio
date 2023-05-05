@@ -1,3 +1,7 @@
+<script>
+	import ContactSection from '$lib/components/ContactSection.svelte';
+</script>
+
 <svelte:head>
 	<title>Success | Pritish - Best Website Developer/Designer in India</title>
 </svelte:head>
@@ -31,17 +35,14 @@
 					<p class="paragraph">
 						Meanwhile you can view some of my <a class="primary-link" href="/works">Works</a>
 					</p>
-
-					<p class="paragraph">
-						<a class="primary-link" href="/#contact">Click Here</a> to submit another message.
-					</p>
 				</div>
 			</div>
 		</div>
 	</section>
+	<ContactSection />
 </main>
 
-<style lang="scss">
+<style>
 	.success-wrapper div {
 		display: flex;
 		flex-direction: column;

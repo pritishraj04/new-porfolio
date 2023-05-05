@@ -13,8 +13,8 @@
 	<form
 		name="contact"
 		autocomplete="off"
-		action="/success"
 		method="POST"
+		action="/success"
 		data-netlify="true"
 		data-netlify-honeypot="bot-field"
 	>
@@ -25,27 +25,55 @@
 			</label>
 		</p>
 		<label for="fullname" class="inp full-width">
-			<input type="text" id="fullname" name="fullname" class="text-field" placeholder="&nbsp;" />
+			<input
+				type="text"
+				id="fullname"
+				name="fullname"
+				class="text-field"
+				placeholder="&nbsp;"
+				required
+			/>
 			<span class="label">Full Name</span>
 			<span class="focus-bg" />
 		</label>
 		<label for="email" class="inp">
-			<input type="email" id="email" name="email" class="text-field" placeholder="&nbsp;" />
+			<input
+				type="email"
+				id="email"
+				name="email"
+				class="text-field"
+				placeholder="&nbsp;"
+				required
+			/>
 			<span class="label">Email</span>
 			<span class="focus-bg" />
 		</label>
 		<label for="phone" class="inp">
-			<input type="text" id="phone" name="phone" class="text-field" placeholder="&nbsp;" />
+			<input type="text" id="phone" name="phone" class="text-field" placeholder="&nbsp;" required />
 			<span class="label">Phone Number</span>
 			<span class="focus-bg" />
 		</label>
 		<label for="subject" class="inp full-width">
-			<input type="text" id="subject" name="subject" class="text-field" placeholder="&nbsp;" />
+			<input
+				type="text"
+				id="subject"
+				name="subject"
+				class="text-field"
+				placeholder="&nbsp;"
+				required
+			/>
 			<span class="label">Subject</span>
 			<span class="focus-bg" />
 		</label>
 		<label for="message" class="inp full-width">
-			<textarea name="message" id="message" class="text-field" rows="3" placeholder="&nbsp;" />
+			<textarea
+				name="message"
+				id="message"
+				class="text-field"
+				rows="3"
+				placeholder="&nbsp;"
+				required
+			/>
 			<span class="label">Message</span>
 			<span class="focus-bg" />
 		</label>
