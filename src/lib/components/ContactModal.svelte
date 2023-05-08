@@ -9,6 +9,7 @@
 		$contactModal = false;
 	}}
 	heading="Get in touch!"
+	paragraph="Average response time: 48 Hrs."
 >
 	<form
 		name="contact"

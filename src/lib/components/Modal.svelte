@@ -1,6 +1,7 @@
 <script>
 	export let showModal, closeModal;
-	export let heading = 'modal'; // boolean
+	export let heading = 'modal';
+	export let paragraph;
 
 	let dialog; // HTMLDialogElement
 
@@ -30,7 +31,12 @@
 >
 	<div on:click|stopPropagation>
 		<div class="head">
-			<h2 class="secondary-heading">{heading}</h2>
+			<div>
+				<h2 class="secondary-heading">{heading}</h2>
+				{#if paragraph}
+					<p class="paragraph">{paragraph}</p>
+				{/if}
+			</div>
 			<!-- svelte-ignore a11y-autofocus -->
 			<button
 				autofocus

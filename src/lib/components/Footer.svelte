@@ -89,11 +89,14 @@
 		gap: 2rem;
 		margin-top: 1.5rem;
 	}
+	.col-header {
+		font-weight: var(--fw-bold);
+	}
 	.footer-col .col-options {
 		display: flex;
-		margin-top: 0.75rem;
+		margin-top: 1rem;
 		flex-direction: column;
-		gap: 0.375rem;
+		gap: 0.2rem;
 	}
 	.col0 .col-options {
 		flex-direction: row;

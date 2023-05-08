@@ -314,11 +314,11 @@ body {
 }
 
 [data-theme='light'] .paragraph {
-	color: var(--clr-neutral-500);
+	color: var(--clr-neutral-600);
 	transition: color 300ms linear;
 }
 [data-theme='dark'] .paragraph {
-	color: var(--clr-neutral-600);
+	color: var(--clr-neutral-400);
 	transition: color 300ms linear;
 }
 
@@ -368,11 +368,15 @@ body {
 }
 
 [data-theme='light'] .expertise-wrapper ul li:nth-child(2n) {
-	background-color: var(--clr-neutral-300);
+	background-color: hsla(0, 0%, 58%, 0.35);
+	backdrop-filter: saturate(180%) blur(30px);
+	-webkit-backdrop-filter: blur(30px);
 	transition: background-color 300ms linear;
 }
 [data-theme='dark'] .expertise-wrapper ul li:nth-child(2n) {
-	background-color: var(--clr-neutral-800);
+	background-color: hsla(0, 0%, 40%, 0.35);
+	backdrop-filter: saturate(180%) blur(30px);
+	-webkit-backdrop-filter: blur(30px);
 	transition: background-color 300ms linear;
 }
 /* [data-theme='light'] .contact-wrapper {
