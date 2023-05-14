@@ -1,17 +1,13 @@
 <script>
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
-	import PageTransition from '$lib/components/PageTransition.svelte';
 	import CustomCursor from '$lib/components/CustomCursor.svelte';
 	import ContactModal from '../lib/components/ContactModal.svelte';
-	export let data;
 </script>
 
 <CustomCursor>
 	<Header />
-	<PageTransition pathname={data.pathname}>
-		<slot />
-	</PageTransition>
+	<slot />
 	<Footer />
 	<ContactModal />
 </CustomCursor>

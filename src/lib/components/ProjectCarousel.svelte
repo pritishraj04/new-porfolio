@@ -1,7 +1,7 @@
 <script>
 	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
 	import '@splidejs/svelte-splide/css';
-	import ProjectCard from './ProjectCard.svelte';
+	import ProjectCard from '$lib/components/ProjectCard.svelte';
 	export let works = [];
 	const workOption = {
 		pagination: true,
