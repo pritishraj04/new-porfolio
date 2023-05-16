@@ -22,6 +22,7 @@
 
 	--clr-fullstack: hsla(142, 75%, 42%, 0.566);
 	--clr-frontend: hsla(216, 72%, 39%, 0.566);
+	--clr-backend: hsla(355, 72%, 39%, 0.566);
 
 	/* font family */
 	--ff-primary: Montserrat, 'Segoe UI', sans-serif;
@@ -607,6 +608,25 @@ body {
 	backdrop-filter: saturate(180%) blur(30px);
 	-webkit-backdrop-filter: blur(30px);
 	transition: background-color 300ms linear, color 300ms linear;
+}
+
+.fieldset {
+	border-radius: 10px;
+	padding: 1.008em 1.805em;
+	font-weight: var(--fw-semi-bold);
+	font-size: var(--fs-button);
+	line-height: 2;
+	background-color: rgba(149, 149, 149, 0.35);
+	color: var(--clr-neutral-100);
+	transition: all 0.15s ease;
+}
+[data-theme='light'] .fieldset {
+	background-color: rgba(149, 149, 149, 0.35);
+	color: var(--clr-neutral-900);
+}
+[data-theme='dark'] .fieldset {
+	background-color: hsla(0, 0%, 40%, 0.35);
+	color: var(--clr-neutral-100);
 }
 .site-head-wrapper {
 	padding-block: 200px 40px;

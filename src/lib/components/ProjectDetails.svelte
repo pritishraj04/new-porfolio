@@ -3,15 +3,10 @@
 </script>
 
 <div class="project">
-	<div class="project-image">
-		<img src={`/img/works/${img}`} alt={`Image for ${title}`} />
-	</div>
-	<div class="project-details">
-		<h2 class="secondary-heading">{title}</h2>
-		<h3 class={'ternary-heading cat-' + category}>{category}</h3>
-		<p class="paragraph">
-			{desc}
-		</p>
+	<div class="project-insight">
+		<div class="project-image">
+			<img src={`/img/works/${img}`} alt={`Image for ${title}`} />
+		</div>
 		<div class="technologies bg-blur-primary bg-blur">
 			<h3 class="ternary-heading">Techonologies Used:</h3>
 			<ul>
@@ -26,6 +21,14 @@
 			<a href={link} target="_blank" class="button">View Project</a>
 		</div>
 	</div>
+
+	<div class="project-details">
+		<h2 class="secondary-heading">{title}</h2>
+		<h3 class={'ternary-heading cat-' + category}>{category}</h3>
+		<div class="desc">
+			{@html desc}
+		</div>
+	</div>
 </div>
 
 <style>
@@ -33,6 +36,11 @@
 		display: flex;
 		justify-content: space-between;
 		gap: 2.5rem;
+	}
+	.project-insight {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
 	}
 	.project-image {
 		overflow: hidden;
@@ -71,6 +79,9 @@
 	}
 	.cat-frontend {
 		background-color: var(--clr-frontend);
+	}
+	.cat-backend {
+		background-color: var(--clr-backend);
 	}
 	.technologies {
 		padding: 10px 5px;

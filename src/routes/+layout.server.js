@@ -1,8 +1,20 @@
-export const prerender = true;
+import { db } from '$lib/database';
 
-export async function load({ locals, url: { pathname } }) {
+export async function load({ locals, url }) {
+	const works = async () => {
+		return await db.Works.findMany();
+	};
+	const technologies = async () => {
+		return await db.Technologies.findMany();
+	};
+	const categories = async () => {
+		return await db.Categories.findMany();
+	};
 	return {
 		theme: locals.theme,
-		pathname
+		url: url.pathname,
+		works: works(),
+		technologies: technologies(),
+		categories: categories()
 	};
 }

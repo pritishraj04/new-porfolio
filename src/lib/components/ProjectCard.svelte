@@ -25,7 +25,7 @@
 		<h2 class="ternary-heading">{projectName}</h2>
 	</div>
 	<div class="project-details">
-		<p class="paragraph">{projectDesc.slice(0, 140)}...</p>
+		{@html projectDesc.slice(0, 140)}...
 	</div>
 	<div class="project-actions">
 		<a href={projectLink} class="button">View</a>
@@ -56,6 +56,9 @@
 	}
 	.cat-frontend {
 		background-color: var(--clr-frontend);
+	}
+	.cat-backend {
+		background-color: var(--clr-backend);
 	}
 	.project-image img {
 		object-position: center;
