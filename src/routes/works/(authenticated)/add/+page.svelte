@@ -1,17 +1,21 @@
 <script>
 	import ContactSection from '$lib/components/ContactSection.svelte';
 	import ProjectDetails from '$lib/components/ProjectDetails.svelte';
-	import { enhance } from '$app/forms';
 	import { page } from '$app/stores';
 
-	let img = '/img/works/placeholder.png',
+	const categories = $page.data.categories;
+	const technologies = $page.data.technologies;
+
+	export let form;
+
+	let img = '',
 		title = '',
+		slug = '',
 		category,
 		desc = ``,
 		link = '',
+		defaultOrder = 0,
 		tech = [];
-	const categories = $page.data.categories;
-	const technologies = $page.data.technologies;
 </script>
 
 <svelte:head>
@@ -39,7 +43,7 @@
 	<section class="margin-block-primary padding-block-primary">
 		<div class="container">
 			<div class="add_project-wrapper">
-				<form action="?/addWork" method="POST" autocomplete="off" use:enhance>
+				<form action="?/addWork" method="POST" autocomplete="off">
 					<label for="title" class="inp">
 						<input
 							type="text"
@@ -58,6 +62,7 @@
 							type="text"
 							id="slug"
 							name="slug"
+							bind:value={slug}
 							class="text-field"
 							placeholder="&nbsp;"
 							required
@@ -70,6 +75,7 @@
 							type="text"
 							id="img"
 							name="img"
+							bind:value={img}
 							class="text-field"
 							placeholder="&nbsp;"
 							required
@@ -87,7 +93,7 @@
 							placeholder="&nbsp;"
 							required
 						/>
-						<span class="label">Link</span>
+						<span class="label">Project Link</span>
 						<span class="focus-bg" />
 					</label>
 					<label for="defaultOrder" class="inp">
@@ -96,6 +102,7 @@
 							min="0"
 							id="defaultOrder"
 							name="defaultOrder"
+							bind:value={defaultOrder}
 							class="text-field"
 							placeholder="&nbsp;"
 							required
@@ -107,7 +114,7 @@
 					<select class="select" name="category" id="category" bind:value={category}>
 						<option value="" disabled selected>Select your Category</option>
 						{#each categories as category}
-							<option value={category.name}>{category.name}</option>
+							<option value={category.id}>{category.name}</option>
 						{/each}
 					</select>
 
@@ -138,6 +145,11 @@
 						<span class="label">Description(HTML)</span>
 						<span class="focus-bg" />
 					</label>
+					{#if form?.error}
+						<p class="form-error full-width">
+							{form?.error}
+						</p>
+					{/if}
 					<div class="action full-width">
 						<button class="button" type="submit" id="submit">
 							Send <iconify-icon icon="mdi:email-arrow-right" style="font-size: 32px" />

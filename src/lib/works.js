@@ -9,15 +9,10 @@ const works = [
 		link: 'https://property-listing-livid.vercel.app/',
 		desc: `<p class="paragraph">Introducing our cutting-edge Full Stack Property Listing project</p>
 		<p class="paragraph">Developed using SvelteKit, CSS, Prisma, and SQLite, this exceptional endeavor is designed to revolutionize the way users interact with property listings. Our goal is to provide a seamless browsing experience while emphasizing quick login and registration integration.</p>
-		
 		<p class="paragraph">At the forefront of this project is a user-friendly interface that simplifies the process of finding and exploring properties. We understand the importance of swift access, which is why we've incorporated a quick login and register system that ensures users can effortlessly engage with our platform.</p>
-		
 		<p class="paragraph">Gone are the days of mandatory signup/login procedures for property browsing. With our innovative solution, customers can now browse and shortlist their desired properties without the hassle of creating an account. This frictionless experience allows users to focus solely on their property search, saving valuable time and effort.</p>
-		
 		<p class="paragraph">Our frontend implementation, utilizing SvelteKit and CSS, showcases a visually stunning and intuitive design. This ensures an immersive browsing experience that captivates users from the moment they enter the site. Coupled with a responsive and mobile-friendly layout, our platform delivers a seamless experience across all devices.</p>
-		
 		<p class="paragraph">Under the hood, our backend is powered by Prisma and SQLite, two robust technologies that ensure efficient data management and seamless integration. With Prisma's powerful querying capabilities and SQLite's lightweight yet reliable database system, we've built a solid foundation that guarantees fast and reliable property listing retrieval.</p>
-		
 		<p class="paragraph">In summary, our Full Stack Property Listing project redefines the way customers interact with property listings. By incorporating SvelteKit, CSS, Prisma, and SQLite, we've created an innovative solution that streamlines the login and registration process and provides a hassle-free property browsing experience. Join us on this exciting journey and unlock a world of endless possibilities in the real estate market.</p>`,
 		orderByNew: 10
 	},
