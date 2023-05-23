@@ -71,6 +71,15 @@
 			</div>
 		</div>
 	</section>
+	<!-- <section class="work margin-block-primary padding-block-primary">
+		<div class="container">
+			<form method="POST">
+				<button formaction="?/addCategories" type="submit">Add Category</button>
+				<button formaction="?/addTechnologies" type="submit">Add Technology</button>
+				<button formaction="?/addWorks" type="submit">Add Works</button>
+			</form>
+		</div>
+	</section> -->
 	<section class="work margin-block-primary padding-block-primary">
 		<div class="container">
 			<div class="work-wrapper">
