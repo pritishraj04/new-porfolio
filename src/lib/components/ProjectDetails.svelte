@@ -18,7 +18,7 @@
 			</ul>
 		</div>
 		<div class="cta-visit">
-			<a href={link} target="_blank" class="button">View Project</a>
+			<a href={link} target="_blank" class="button" rel="nofollow">View Project</a>
 		</div>
 	</div>
 

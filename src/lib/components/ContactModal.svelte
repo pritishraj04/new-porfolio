@@ -50,7 +50,7 @@
 			<span class="focus-bg" />
 		</label>
 		<label for="phone" class="inp">
-			<input type="text" id="phone" name="phone" class="text-field" placeholder="&nbsp;" required />
+			<input type="tel" id="phone" name="phone" class="text-field" placeholder="&nbsp;" required />
 			<span class="label">Phone Number</span>
 			<span class="focus-bg" />
 		</label>

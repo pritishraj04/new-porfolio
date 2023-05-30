@@ -1,3 +1,5 @@
+export const prerender = true
+
 // import { db } from '$lib/database';
 
 export async function load({ locals, url }) {
