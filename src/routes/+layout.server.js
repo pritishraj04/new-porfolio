@@ -1,7 +1,7 @@
-export const prerender = true
+export const prerender = true;
 
-export async function load({ locals}) {
+export async function load({ locals }) {
 	return {
-		theme: locals.theme,
+		theme: locals.theme
 	};
 }

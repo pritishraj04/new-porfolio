@@ -25,8 +25,9 @@
 		<h2 class="ternary-heading">{projectName}</h2>
 	</div>
 	<div class="project-details">
-		{@html projectDesc.slice(0, 140)}...
+		{@html projectDesc}
 	</div>
+	...
 	<div class="project-actions">
 		<a href={projectLink} class="button">View</a>
 	</div>
@@ -70,7 +71,14 @@
 	}
 	.project-details {
 		margin-top: 10px;
-		min-height: 5rem;
+		min-height: 3rem;
+		max-height: 4.25rem;
+		overflow: hidden;
+	}
+	@media screen and (max-width: 50em) {
+		.project-details {
+			max-height: 3.65rem;
+		}
 	}
 	.project-actions {
 		text-align: end;

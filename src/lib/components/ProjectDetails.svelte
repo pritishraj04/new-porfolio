@@ -84,7 +84,7 @@
 		background-color: var(--clr-backend);
 	}
 	.technologies {
-		padding: 10px 5px;
+		padding: 15px 20px;
 		border-radius: 10px;
 	}
 	.technologies ul {
