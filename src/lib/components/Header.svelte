@@ -44,7 +44,7 @@
 
 <header class={scrollY > 100 || isMenuOpen ? 'bg-primary on-top' : ''}>
 	<div class="container" style={scrollY > 100 ? 'padding-top: 1.5rem;' : ''}>
-		<div class="logo"><a href="/" aria-label="Home"><Logo theme={$currentTheme} /></a></div>
+		<div class="logo"><a href="/#" aria-label="Home"><Logo theme={$currentTheme} /></a></div>
 		<div class="flex">
 			<nav>
 				<ul data-role="list">
