@@ -15,7 +15,7 @@
 
 <div class="project-card bg-blur-primary">
 	<div class="project-image">
-		<img src={projectImg} alt={`Image for ${projectName}`} loading="lazy" />
+		<img src={projectImg} alt={`Image for ${projectName}`} height="169px" loading="lazy" />
 		<button
 			on:click={handleNavigateCategory(projectCategory)}
 			class={'button project-category cat-' + projectCategory}>{projectCategory}</button

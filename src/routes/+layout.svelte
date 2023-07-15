@@ -23,10 +23,6 @@
 	});
 </script>
 
-<svelte:head>
-	<meta property="og:image" content="/favicon.png" />
-</svelte:head>
-
 <CustomCursor>
 	<Header />
 	<slot />

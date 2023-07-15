@@ -143,16 +143,6 @@ body {
 	color: var(--clr-neutral-800);
 	background-color: #f6f8f9;
 }
-[data-theme='light'] body {
-	color: var(--clr-neutral-800);
-	background-color: var(--clr-neutral-200);
-	transition: background-color 300ms linear, color 300ms linear;
-}
-[data-theme='dark'] body {
-	color: var(--clr-neutral-200);
-	background-color: hsla(0, 0%, 0%, 0.477);
-	transition: background-color 300ms linear, color 300ms linear;
-}
 
 [data-theme='light'] h1,
 [data-theme='light'] h2,
@@ -301,7 +291,7 @@ body {
 }
 
 [data-theme='light'] .bg-blur-primary {
-	background-color: hsla(0, 0%, 58%, 0.35);
+	background-color: hsla(0, 0%, 100%, 0.815);
 	transition: background-color 300ms linear;
 }
 [data-theme='dark'] .bg-blur-primary {
@@ -375,7 +365,7 @@ body {
 }
 
 [data-theme='light'] .expertise-wrapper ul li:nth-child(2n) {
-	background-color: hsla(0, 0%, 58%, 0.35);
+	background-color: hsla(0, 0%, 100%, 0.815);
 	backdrop-filter: saturate(180%) blur(30px);
 	-webkit-backdrop-filter: blur(30px);
 	transition: background-color 300ms linear;
