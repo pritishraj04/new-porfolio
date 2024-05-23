@@ -19,8 +19,8 @@
 				<h1 class="text-name">Pritish Raj.</h1>
 				<h2 class="text-work">Software Engineer from New Delhi.</h2>
 				<p class="paragraph">
-					Right now I'm looking for new opportunites in Test Automation and Web
-					development.Currently working at Creatiosoft Pvt. Ltd. as a Test Engineer.
+					Learning new Technologies in web development and web automation frameworks. Currently
+					working at Appinventiv Technologies Pvt. Ltd. as a Senior Quality Analyst.
 				</p>
 			</div>
 			<div class="showcase bg-blur-primary bg-blur">
@@ -36,16 +36,29 @@
 			<h1 class="section-heading">About</h1>
 			<div class="about-wrapper">
 				<h2 class="secondary-heading">
-					Currently Working as Test Engineer at Creatiosoft Pvt. Ltd.
+					Currently Working as a Senior Quality Analyst at Appinventiv Technologies Pvt. Ltd.
 				</h2>
+				<p class="paragraph">
+					Previously I have worked with Creatiosoft Solution Pvt. Ltd. as a software test engineer.
+					My primary day to day task at this organisation inclues leading a small group of team as a
+					POC for my manager, writing and reviewing test cases and reporting, and pier review issues
+					on bug tracking tools. I have worked on multiple poker game web and mobile based projects
+					and other various games, webapps and websites.
+				</p>
 				<p class="paragraph">
 					Prior to this role i was assigned a role of FQA Tester at Babel Media Pvt. Ltd.. In this
 					role i have worked on multiple projects including AAA games. I also have worked in Agile
 					work environment. I am well versed in different testing techniques and tools.Previously, I
-					have done web development to build enhanced UI & UX for emerging companies. I was a
-					freelance web and brand designer and developer, and worked with Polardot.in to help
-					multiple companies to build their digital footprint. I was also an intern at Tech4i Pvt.
-					Ltd.
+					have done web development to build enhanced UI & UX for emerging companies.
+				</p>
+				<p class="paragraph">
+					Before this I have also worked as an intern at Tech4i Pvt. Ltd. Here I got the chance to
+					work on web development project which helps students and teacher with a platform to
+					connect effortlessy online.
+				</p>
+				<p class="paragraph">
+					I was a freelance web and brand designer and developer, and worked with Polardot.in to
+					help multiple companies to build their digital footprint.
 				</p>
 				<p class="paragraph">
 					Want to work together? <a class="primary-link" href="#contact"> Contact me.</a>
@@ -55,8 +68,14 @@
 				<h2 class="secondary-heading">Work History</h2>
 				<ul data-role="list">
 					<li>
+						<h5 class="ternary-heading">
+							Senior Quality Analyst - Appinventiv Technologies Pvt. Ltd., Noida
+						</h5>
+						<p class="paragraph">May 2024 - Currently Working Here</p>
+					</li>
+					<li>
 						<h5 class="ternary-heading">Test Engineer - Creatiosoft Pvt. Ltd., Noida</h5>
-						<p class="paragraph">May 2022 - Currently Working Here</p>
+						<p class="paragraph">May 2022 - Apr 2024</p>
 					</li>
 					<li>
 						<h5 class="ternary-heading">
@@ -90,27 +109,18 @@
 				<ul data-role="list">
 					<li>
 						<iconify-icon icon="game-icons:materials-science" style="font-size: 96px;" />
-						<h5 class="ternary-heading">Digital Products</h5>
-						<p class="paragraph">
-							Web design encompasses many different skills and diciplines in the production of all
-							web.
-						</p>
+						<h5 class="ternary-heading">Digital Solution</h5>
+						<p class="paragraph">Comprehensive package of technologies, tools, and services</p>
 					</li>
 					<li>
 						<iconify-icon icon="material-symbols:ambient-screen-rounded" style="font-size: 96px" />
 						<h5 class="ternary-heading">UI-UX Design</h5>
-						<p class="paragraph">
-							Web design encompasses many different skills and diciplines in the production of all
-							web.
-						</p>
+						<p class="paragraph">Creating the visual elements and layout of a website</p>
 					</li>
 					<li>
 						<iconify-icon icon="solar:devices-bold-duotone" style="font-size: 96px" />
 						<h5 class="ternary-heading">Web Development</h5>
-						<p class="paragraph">
-							Web design encompasses many different skills and diciplines in the production of all
-							web.
-						</p>
+						<p class="paragraph">Translating these designs into a functional website</p>
 					</li>
 				</ul>
 			</div>
