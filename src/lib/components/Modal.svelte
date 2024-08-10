@@ -60,6 +60,7 @@
 		margin-top: 5rem;
 		max-height: 80vh;
 		max-height: 80dvh;
+		cursor: auto;
 	}
 	dialog .head {
 		display: flex;

@@ -58,7 +58,7 @@
 					<h3 class="col-header ternary-heading">Address</h3>
 					<div class="col-options">
 						<address class="paragraph">
-							Written by <a class="primary-link" href="mailto:pritishraj04@gmail.com">Pritish Raj</a
+							Write to <a class="primary-link" href="mailto:pritishraj04@gmail.com">Pritish Raj</a
 							>.<br />
 							Visit us at:<br />
 							Kankarbagh<br />
